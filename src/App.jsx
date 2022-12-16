@@ -6,7 +6,7 @@ import Body from "./components/Body"
 import Course from "./pages/Course"
 import Projects from "./pages/Proyects"
 import Perfil from "./pages/Perfil"
-import CourseDetail from "./components/CourseDetail"
+import CourseDetailContainer from "./components/CourseDetailContainer"
 import Footer from "./components/Footer"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
@@ -21,7 +21,7 @@ function App() {
           <Route path='/cursos' element={<Course/>}></Route>
           <Route path='/proyectos' element={<Projects/>}></Route>
           <Route path='/perfil' element={<Perfil/>}></Route>
-          <Route path='/cursos/:idCategory' element={<CourseDetail/>}></Route>
+          <Route path='/course/:idCategory' element={<CourseDetailContainer/>}></Route>
         </Routes>
         <Footer/>
       </BrowserRouter>      
