@@ -1,6 +1,8 @@
 export const dataPerfil=[
     {
         id:1,
+        img:"https://i.ibb.co/QKgRsTj/FAnoBG.png",
+        altImg:"foto perfil",
         titulo:"¡Hola! Soy Francisco",
         parrafoPrimero:"Soy desarrollador Frontend desde 2.022.",
         parrafoSegundoInicio:"Inicie mis estudios de manera autodidacta y luego lo complemente con la",
@@ -11,6 +13,8 @@ export const dataPerfil=[
     },
     {
         id:2,
+        img:"https://i.ibb.co/6WRsvKn/cocinando.webp",
+        altImg:"foto cocina",
         titulo:"¡Me gusta cocinar!",
         parrafoPrimero:"Apasionado de la pastelería y lo dulce",
         parrafoSegundoInicio:"Si algo me gusta de la cocina es",
@@ -21,6 +25,8 @@ export const dataPerfil=[
     },
     {
         id:3,
+        img:"https://i.ibb.co/KWwk1pJ/mandatario.jpg",
+        altImg:"foto finanza",
         titulo:"Me atraen los números...",
         parrafoPrimero:"Las matemáticas y la lógica son un permanente desafío",
         parrafoSegundoInicio:"Algo que me fascina en el ambito familiar son las",
@@ -31,6 +37,8 @@ export const dataPerfil=[
     },
     {
         id:4,
+        img:"https://i.ibb.co/wMX4ZKs/corte-fran.jpg",
+        altImg:"foto viaje",
         titulo:"¡Que lindo es viajar!",
         parrafoPrimero:"Cada viaje inicia al momento de salir en ruta.",
         parrafoSegundoInicio:"Soy de las personas que",
@@ -41,6 +49,8 @@ export const dataPerfil=[
     },
     {
         id:5,
+        img:"https://i.ibb.co/2n0cRLn/escuela-Rock.jpg",
+        altImg:"foto docente",
         titulo:"¡Azúca'!",
         parrafoPrimero:"¿Quién no disfruta, en algn momento del día, algo de música?",
         parrafoSegundoInicio:"¿Qué estilo musical me gusta? Todos los",

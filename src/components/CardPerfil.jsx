@@ -3,7 +3,7 @@ const CardPerfil = ({datos,posicion,totalPag,array}) => {
     return(
         <div className="cardPerfil">
             <div className="card">
-                <img src="https://i.ibb.co/QKgRsTj/FAnoBG.png" alt="fotoCarnet"/>
+                <img src={datos.img} alt={datos.altImg}/>
                 <div className="cardInfo">
                     <h2>{datos.titulo}</h2>
 
