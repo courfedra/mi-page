@@ -1,24 +1,25 @@
+@import "variables";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #ababab;
+    color: $grisClaro;
 }
 #root{
-    background-color: #f5f5f5;
+    background-color: $blanco;
     min-height: 100vh;
-    background: #101010;
+    background: $negro;
     .navegador{
         margin: 0 20px;
         min-height: 10vh;
-        background-color: #f5f5f5ee;
-        border-bottom: 2px solid #101010;
+        background-color: $blanco;
+        border-bottom: 2px solid $negro;
         position: sticky;
         top: 0;
         z-index: 100;
         .navbarLogo{
             text-decoration: none;
-            color: #101010;
+            color: $negro;
             img{
                 width: 75px;
             }  
@@ -26,9 +27,9 @@
         .navbarLink{
             text-decoration: none;
             margin: 0 5px;
-            color: #101010;
+            color: $negro;
             &:hover{
-                color:#ababab;
+                color:$grisClaro;
             }
         }
         /*
@@ -84,14 +85,14 @@
             justify-content: space-around;
             align-items: center;
             h1{
-                color: #ababab;
+                color: $grisClaro;
                 display: flex;
                 transition: all .1s ease-in-out;
                 span{
-                    color: #f5f5f5;
+                    color: $blanco;
                     padding: 0 15px;
                     letter-spacing: 1.5px;
-                    filter: drop-shadow(0 0 7.5px #101010);
+                    filter: drop-shadow(0 0 7.5px $negro);
                 }
             }
             h2{
@@ -101,8 +102,8 @@
                 padding: 5px 10px;
                 border-radius: 5px;
                 letter-spacing: 2px;
-                color: #101010;
-                background-color: #ababab;
+                color: $negro;
+                background-color: $grisClaro;
                 border: none;
                 transition: all .2s ease-in-out;
                 &:hover{
@@ -115,16 +116,17 @@
     .course{ 
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding: 10px;
         .courseCard{
-            background-color: #ababab;
-            color: #101010;
+            background-color: $grisClaro;
+            color: $negro;
             border-radius: 15px;
             margin: 5px;
             padding: 5px;
-            width: 20%;
+            width: 50%;
             min-height: 200px;
             display: flex;
             flex-direction: column;
@@ -132,38 +134,52 @@
             align-items: center;
             text-align: center;
             transition: all .1s ease-in-out;
-            h2{color:#101010}
-            p{color: #101010}
+            h2{color:$negro}
+            p{color: $negro}
             &:hover{
-                background-color: #f5f5f5;
+                background-color: $blanco;
                 h2{color:#ff3131};
             }
-            .aCardDetail{
-                text-decoration: none;
-                padding: 5px;
-                margin: 5px;
-                border: 1px solid #ff3131;
-                border-radius: 5px;
-                color: #ff3131;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                transition: all .25s ease-in-out;
-                &:hover{
-                    background-color: #ff3131;
-                    color: #101010;
-                    border: 1px solid #101010;
+            .linksDetail{
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+                .aCardDetail{
+                    text-decoration: none;
+                    width: 200px;
+                    padding: 5px;
+                    margin: 5px;
+                    border: 1px solid #ff3131;
+                    border-radius: 5px;
+                    color: #ff3131;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    transition: all .25s ease-in-out;
+                    &:hover{
+                        background-color: #ff3131;
+                        color: $negro;
+                        border: 1px solid $negro;
+                    }
                 }
-            }
-            .btnCardDetail{
-                @extend .aCardDetail;
-                color: #424fff;
-                border: 1px solid #424fff;
-                background-color: transparent;
-                &:hover{
-                    background-color: #424fff;
-                    color: #101010;
-                    border: 1px solid #101010;
-                }   
+                .btnCardDetail{
+                    text-decoration: none;
+                    width: 200px;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 5px;
+                    border: 1px solid #424fff;
+                    color: #424fff;
+                    background-color: transparent;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    transition: all .25s ease-in-out;
+                    &:hover{
+                        background-color: #424fff;
+                        color: $negro;
+                        border: 1px solid $negro;
+                    }  
+                }
             }   
         }    
     }
@@ -174,14 +190,15 @@
         justify-content: center;
         .courseDetailItem{
             transition: all .1s ease-in-out;
+            border-radius: 15px;
             width: 75%;
-            margin: 5px;
+            margin: 15px 5px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: #444444;
+            background-color: $grisOscuro;
             span{color:#424fff}
             h3,h4{padding: 10px;}
             p{
@@ -190,19 +207,21 @@
                 border: 1px solid #424fff;
             }
             .btnBack{
-                background-color: #101010;
-                padding: 10px 20px;
+                background-color: transparent;
+                padding: 5px 10px;
                 border: 2px solid #424fff;
-                transition: all .25s ease-in-out;
-                &:hover{
-                    background-color: #424fff;
-                    color: #101010;
-                    border: 2px solid #101010;
-                }
+                color: $grisClaro;
+                transition: all .1s ease-in-out;
             }
             &:hover{
-                background-color: #f5f5f5;
-                p,h3,h4{color:#101010}
+                background-color: $blanco;
+                p,h3,h4{color:$negro}
+                .btnBack{
+                    color:$negro;
+                    &:hover{
+                        outline: 1px solid #424fff;
+                    }
+                }
             }
         }
     }
@@ -212,8 +231,8 @@
         width: 100%;
         justify-content: center;
         .proyectCard{
-            background-color: #f5f5f5;
-            box-shadow: 0px 0px 10px 2px #101010;
+            background-color: $blanco;
+            box-shadow: 0px 0px 10px 2px $negro;
             margin: 5px;
             padding: 5px;
             width: 80%;
@@ -235,7 +254,7 @@
                 align-items: center;
                 margin: 5px;
                 padding: 2.5px;
-                p{color: #101010;}
+                p{color: $negro;}
             }
         }
     }
@@ -253,6 +272,8 @@
             align-items: center;
             .card{
                 display: flex;
+                justify-content: space-evenly;
+                align-items: center;
                 flex-direction:row;
                 width: 75%;
                 min-height: 50vh;
@@ -261,9 +282,9 @@
                 background-color: #232323;
                 transition: all .25s ease-in-out;
                 &:hover{
-                    background-color: #ababab;
+                    background-color: $grisClaro;
                     img{filter: grayscale(0)}
-                    .cardInfo p,h2{color:#101010}
+                    .cardInfo p,h2{color:$negro}
                     .cardInfo span
                     {
                         color:#ff3131;
@@ -275,22 +296,20 @@
                     height: 100px;
                     margin: 5px;
                     border-radius: 100%;
-                    outline: 1px solid #f5f5f5;
+                    outline: 1px solid $blanco;
                     background:linear-gradient(45deg,#a2a2a2,#232323);
                     filter: grayscale(1);
                     transition: all .25s ease-in-out;
-    
                 }
                 .cardInfo{
                     transition: all .25s ease-in-out;
                     padding: 10px;
-                    width: 100%;
+                    width: 75%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     text-align:center;
-                    
-                    span{color: #f5f5f5;}
+                    span{color: $blanco;}
                 }
             }
             .numberCard{
@@ -308,7 +327,7 @@
                 }
                 .noActive{
                     @extend .active;
-                    p{color: #ababab;}
+                    p{color: $grisClaro;}
                 }
             }
         }
@@ -321,15 +340,15 @@
             letter-spacing: 1.5px;
             transition: all .25s ease-in-out;
             &:hover{
-                background-color: #ababab;
-                color: #101010;
+                background-color: $grisClaro;
+                color: $negro;
                 outline: 1px solid #424fff;
             }
         }
     }
     .pie{
-        border-top: 2px solid #ababab;
-        background:linear-gradient(to right, #f5f5f5,#ababab);
+        border-top: 2px solid $grisClaro;
+        background:linear-gradient(to right, $blanco,$grisClaro);
         min-height: 15vh;
         padding: 5px;
         width: 100%;

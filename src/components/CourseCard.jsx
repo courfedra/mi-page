@@ -4,8 +4,10 @@ const CourseCard = ({datos}) =>{
         <div className="courseCard">
             <h2>{datos.curso}</h2>
             <p>{datos.academia}</p>
-            <Link to={`/course/${datos.categoria}`}><button className="btnCardDetail">Ver Más</button></Link>
-            <a target="_blank" className="aCardDetail" href={datos.certificado}>Certificado</a>
+            <div className="linksDetail">
+                <Link to={`/cursos/${datos.categoria}`}><button className="btnCardDetail">Entrar</button></Link>
+                <a target="_blank" className="aCardDetail" href={datos.certificado}>Certificado</a>
+            </div>
         </div>
     )
 }
