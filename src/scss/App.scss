@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ababab;
+}
+#root{
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    background: #101010;
+    .navegador{
+        margin: 0 20px;
+        min-height: 10vh;
+        background-color: #f5f5f5ee;
+        border-bottom: 2px solid #101010;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        .navbarLogo{
+            text-decoration: none;
+            color: #101010;
+            img{
+                width: 75px;
+            }
+            
+        }
+        .navbarLink{
+            text-decoration: none;
+            margin: 0 5px;
+            color: #101010;
+            &:hover{
+                color:#ababab;
+            }
+        }
+        /*
+        .navbarBotonera{
+            display: flex;
+            .botoneraColor{
+                margin: 0 2.5px;
+                padding: 5px;
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+            }
+            #botonRojo{
+                border: 2px solid red;
+                transition: all .25s ease-in-out ;
+                &:hover{
+                    background-color: red;
+                }
+            }
+            #botonVerde{
+                border: 2px solid green;
+                transition: all .25s ease-in-out ;
+                &:hover{
+                    background-color: green;
+                }
+            }
+            #botonAzul{
+                border: 2px solid blue;
+                transition: all .25s ease-in-out ;
+                &:hover{
+                    background-color: blue;
+                }
+            }
+            #botonNegro{
+                border: 2px solid black;
+                transition: all .25s ease-in-out ;
+                &:hover{
+                    background-color: black;
+                }
+            }
+        }*/
+    }
+    .inicio{
+        width: 100%;
+        min-height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        .cardInfo{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            h1{
+                color: #ababab;
+                display: flex;
+                transition: all .1s ease-in-out;
+                span{
+                    color: #f5f5f5;
+                    padding: 0 15px;
+                    letter-spacing: 1.5px;
+                    filter: drop-shadow(0 0 7.5px #101010);
+                }
+            }
+            h2{
+                letter-spacing: 1.2px;
+            }
+            .btnInfo{
+                padding: 5px 10px;
+                border-radius: 5px;
+                letter-spacing: 2px;
+                color: #101010;
+                background-color: #ababab;
+                border: none;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    outline: 2px solid #cacaca;
+                }
+            }
+        }
+        
+    }
+    .course{ 
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        .courseCard{
+            background-color: #ababab;
+            color: #101010;
+            border-radius: 15px;
+            margin: 5px;
+            padding: 5px;
+            width: 20%;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all .1s ease-in-out;
+            h2{color:#101010}
+            p{color: #101010}
+            &:hover{
+                background-color: #f5f5f5;
+                h2{color:#ff3131};
+            }
+            a{
+                text-decoration: none;
+                padding: 5px;
+                border: 1px solid #ff3131;
+                border-radius: 5px;
+                color: #ff3131;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                transition: all .25s ease-in-out;
+                &:hover{
+                    background-color: #ff3131;
+                    color: #101010;
+                    border: 1px solid #101010;
+                }
+            }
+
+        }
+    }
+    .proyects{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        .proyectCard{
+            background-color: #f5f5f5;
+            box-shadow: 0px 0px 10px 2px #101010;
+            margin: 5px;
+            padding: 5px;
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .perfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .cardPerfil{
+            width: 100%;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .card{
+                display: flex;
+                flex-direction:row;
+                width: 75%;
+                min-height: 50vh;
+                padding: 5px;
+                text-align: center;
+                background-color: #232323;
+                transition: all .25s ease-in-out;
+                &:hover{
+                    background-color: #ababab;
+                    img{filter: grayscale(0)}
+                    .cardInfo p,h2{color:#101010}
+                    .cardInfo span
+                    {
+                        color:#ff3131;
+                        font-style: oblique;
+                    }
+                }
+                img{
+                    width: 100px;
+                    height: 100px;
+                    margin: 5px;
+                    border-radius: 100%;
+                    outline: 1px solid #f5f5f5;
+                    background:linear-gradient(45deg,#a2a2a2,#232323);
+                    filter: grayscale(1);
+                    transition: all .25s ease-in-out;
+    
+                }
+                .cardInfo{
+                    transition: all .25s ease-in-out;
+                    padding: 10px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align:center;
+                    
+                    span{color: #f5f5f5;}
+                }
+            }
+            .numberCard{
+                width: 50%;
+                height: 5vh;
+                padding: 5px;
+                display: flex;
+                justify-content: center;
+                .active{
+                    width: 10%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    p{color: #ff3131}
+                }
+                .noActive{
+                    @extend .active;
+                    p{color: #ababab;}
+                }
+            }
+        }
+        .btnCardPerfil{
+            padding: 10px;
+            margin: 5px;
+            background-color: #232323;
+            border: none;
+            border-radius: 15px;
+            letter-spacing: 1.5px;
+            transition: all .25s ease-in-out;
+            &:hover{
+                background-color: #ababab;
+                color: #101010;
+                outline: 1px solid #424fff;
+            }
+        }
+    }
+    .pie{
+        border-top: 2px solid #ababab;
+        background:linear-gradient(to right, #f5f5f5,#ababab);
+        min-height: 15vh;
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 100px;
+        }
+    }
+}
