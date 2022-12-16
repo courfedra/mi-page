@@ -12,7 +12,9 @@ const CourseDetailContainer = () => {
        setDatos(data.find(item=>item.categoria==idCategory))
     },[])
     return(
-        <CourseDetail datos={datos}/>
+        <div className="courseDetail">
+            <CourseDetail datos={datos}/>
+        </div>
     )
 }
 export default CourseDetailContainer
