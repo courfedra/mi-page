@@ -1,10 +1,17 @@
 const ProyectCard = ({datos})=>{
     return(
         <div className="proyectCard">
-            <h1>{datos.nombre}</h1>
-            <h2>{datos.sector}</h2>
-            <h3>{datos.link}</h3>
-            <h4>{datos.foto}</h4>
+            <div className="proyectCardImg">
+                <img src={datos.foto}/>
+            </div>
+            <div className="proyectCardInfo">
+                <p>{datos.nombre}</p>
+                <p>{datos.sector}</p>
+                <p>{datos.linkRepo}</p>
+                <p>{datos.linkPage}</p>
+                <p>{datos.descripcion}</p>
+            </div>
+            
         </div>
     )
 }
