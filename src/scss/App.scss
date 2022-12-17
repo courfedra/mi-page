@@ -32,45 +32,6 @@
                 color:$grisClaro;
             }
         }
-        /*
-        .navbarBotonera{
-            display: flex;
-            .botoneraColor{
-                margin: 0 2.5px;
-                padding: 5px;
-                width: 25px;
-                height: 25px;
-                border-radius: 100%;
-            }
-            #botonRojo{
-                border: 2px solid red;
-                transition: all .25s ease-in-out ;
-                &:hover{
-                    background-color: red;
-                }
-            }
-            #botonVerde{
-                border: 2px solid green;
-                transition: all .25s ease-in-out ;
-                &:hover{
-                    background-color: green;
-                }
-            }
-            #botonAzul{
-                border: 2px solid blue;
-                transition: all .25s ease-in-out ;
-                &:hover{
-                    background-color: blue;
-                }
-            }
-            #botonNegro{
-                border: 2px solid black;
-                transition: all .25s ease-in-out ;
-                &:hover{
-                    background-color: black;
-                }
-            }
-        }*/
     }
     .inicio{
         width: 100%;
@@ -107,7 +68,7 @@
                 border: none;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    outline: 2px solid #cacaca;
+                    outline: 2px solid $grisOscuro;
                 }
             }
         }
@@ -138,7 +99,7 @@
             p{color: $negro}
             &:hover{
                 background-color: $blanco;
-                h2{color:#ff3131};
+                h2{color:$rojo};
             }
             .linksDetail{
                 display: flex;
@@ -150,14 +111,14 @@
                     width: 200px;
                     padding: 5px;
                     margin: 5px;
-                    border: 1px solid #ff3131;
+                    border: 1px solid $rojo;
                     border-radius: 5px;
-                    color: #ff3131;
+                    color: $rojo;
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     transition: all .25s ease-in-out;
                     &:hover{
-                        background-color: #ff3131;
+                        background-color: $rojo;
                         color: $negro;
                         border: 1px solid $negro;
                     }
@@ -168,14 +129,14 @@
                     padding: 5px;
                     margin: 5px;
                     border-radius: 5px;
-                    border: 1px solid #424fff;
-                    color: #424fff;
+                    border: 1px solid $azul;
+                    color: $azul;
                     background-color: transparent;
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     transition: all .25s ease-in-out;
                     &:hover{
-                        background-color: #424fff;
+                        background-color: $azul;
                         color: $negro;
                         border: 1px solid $negro;
                     }  
@@ -231,7 +192,7 @@
         width: 100%;
         justify-content: center;
         .proyectCard{
-            background-color: $blanco;
+            background-color: $grisOscuro;
             box-shadow: 0px 0px 10px 2px $negro;
             margin: 5px;
             padding: 5px;
@@ -240,21 +201,36 @@
             align-items: center;
             justify-content: space-between;
             .proyectCardImg{
+                width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin: 5px;
                 padding: 2.5px;
+                img{width: 100%;border-radius: 10px;}
             }
             .proyectCardInfo{
-                width: 100%;
+                width: 50%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 margin: 5px;
                 padding: 2.5px;
-                p{color: $negro;}
+                p{color: $blanco;}
+                h3{color: $azul;}
+                h5{color:$rojo}
+                a{
+                    padding: 5px;
+                    color: $blanco;
+                    text-decoration: none;
+                    outline: 1px solid $blanco;
+                    &:hover{
+                        color: $grisClaro;
+                        outline: 1px solid $grisClaro;
+                    }
+                }
             }
         }
     }
@@ -279,7 +255,7 @@
                 min-height: 50vh;
                 padding: 5px;
                 text-align: center;
-                background-color: #232323;
+                background-color: $grisNegro;
                 transition: all .25s ease-in-out;
                 &:hover{
                     background-color: $grisClaro;
@@ -287,7 +263,7 @@
                     .cardInfo p,h2{color:$negro}
                     .cardInfo span
                     {
-                        color:#ff3131;
+                        color:$rojo;
                         font-style: oblique;
                     }
                 }
@@ -297,7 +273,7 @@
                     margin: 5px;
                     border-radius: 100%;
                     outline: 1px solid $blanco;
-                    background:linear-gradient(45deg,#a2a2a2,#232323);
+                    background:linear-gradient(45deg,$grisClaro,$grisNegro);
                     filter: grayscale(1);
                     transition: all .25s ease-in-out;
                 }
@@ -323,7 +299,7 @@
                     display: flex;
                     justify-content: center;
                     text-align: center;
-                    p{color: #ff3131}
+                    p{color: $rojo}
                 }
                 .noActive{
                     @extend .active;
@@ -334,7 +310,7 @@
         .btnCardPerfil{
             padding: 10px;
             margin: 5px;
-            background-color: #232323;
+            background-color: $grisNegro;
             border: none;
             border-radius: 15px;
             letter-spacing: 1.5px;
@@ -342,7 +318,7 @@
             &:hover{
                 background-color: $grisClaro;
                 color: $negro;
-                outline: 1px solid #424fff;
+                outline: 1px solid $azul;
             }
         }
     }

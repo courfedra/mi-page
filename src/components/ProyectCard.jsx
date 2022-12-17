@@ -5,10 +5,10 @@ const ProyectCard = ({datos})=>{
                 <img src={datos.foto}/>
             </div>
             <div className="proyectCardInfo">
-                <p>{datos.nombre}</p>
-                <p>{datos.sector}</p>
-                <p>{datos.linkRepo}</p>
-                <p>{datos.linkPage}</p>
+                <h3>{datos.nombre}</h3>
+                <h5>{datos.sector}</h5>
+                <a target="_blank" href={datos.linkRepo}>Link al repositorio</a>
+                <a target="_blank" href={datos.linkPage}>Link al sitio web</a>
                 <p>{datos.descripcion}</p>
             </div>
             
