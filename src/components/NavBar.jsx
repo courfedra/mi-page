@@ -25,7 +25,6 @@ const NavBar = ()=>{
                         </li>
                     </ul>
                 </div>
-                
             </div>
         </nav>
     )
