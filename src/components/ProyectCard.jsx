@@ -5,8 +5,8 @@ const ProyectCard = ({datos})=>{
                 <img src={datos.foto}/>
             </div>
             <div className="proyectCardInfo">
-                <h3>{datos.nombre}</h3>
-                <h5>{datos.sector}</h5>
+                <h3>Nombre del proyecto: <span>{datos.nombre}</span></h3>
+                <h5>Tecnología predominante: <span>{datos.sector}</span></h5>
                 <a target="_blank" href={datos.linkRepo}>Link al repositorio</a>
                 <a target="_blank" href={datos.linkPage}>Link al sitio web</a>
                 <p>{datos.descripcion}</p>

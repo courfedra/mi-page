@@ -1,7 +1,7 @@
 export const dataProyects = [
     {
         nombre:"Del Buen Vino",
-        sector:"Desarrollo Web",
+        sector:"HTML y CSS",
         linkRepo:"https://github.com/courfedra/desarrollo-web",
         linkPage:"https://courfedra.github.io/desarrollo-web/",
         foto:"https://i.ibb.co/qYyJ4NS/del-Buen-Vino.png",
@@ -28,7 +28,7 @@ export const dataProyects = [
     },
     {
         nombre:"Franandres",
-        sector:"Autodidacta",
+        sector:"React JS",
         linkRepo:"https://github.com/courfedra/mi-page",
         linkPage:"https://franandres.vercel.app/",
         foto:"https://i.ibb.co/Xb9F2m8/miPage.png",
@@ -36,12 +36,12 @@ export const dataProyects = [
         id:3
     },
     {
-        nombre:"Del Buen Vino",
-        sector:"Desarrollo Web",
-        linkRepo:"https://github.com/courfedra/desarrollo-web",
-        linkPage:"https://courfedra.github.io/desarrollo-web/",
-        foto:"https://i.ibb.co/6WRsvKn/cocinando.webp",
-        descripcion:"Se utilizo HTML, CSS, Sass y bootstrap",
+        nombre:"Proximamente",
+        sector:"React Native",
+        linkRepo:"#",
+        linkPage:"#",
+        foto:"https://i.ibb.co/2PYnHD3/pr-ximamente.webp",
+        descripcion:"...",
         id:4
     }
 ]

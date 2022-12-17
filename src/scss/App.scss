@@ -207,7 +207,15 @@
                 align-items: center;
                 margin: 5px;
                 padding: 2.5px;
-                img{width: 100%;border-radius: 10px;}
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    filter:grayscale(1);
+                    transition: all .2s ease-in-out;
+                    &:hover{
+                        filter: grayscale(0);
+                    }
+                }
             }
             .proyectCardInfo{
                 width: 50%;
@@ -219,10 +227,13 @@
                 margin: 5px;
                 padding: 2.5px;
                 p{color: $blanco;}
-                h3{color: $azul;}
-                h5{color:$rojo}
+                span{color: $verde}
+                h3,h5{color: $grisClaro;}
                 a{
+                    text-align: center;
+                    width: 50%;
                     padding: 5px;
+                    border-radius: 25px;
                     color: $blanco;
                     text-decoration: none;
                     outline: 1px solid $blanco;
