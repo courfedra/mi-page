@@ -26,6 +26,7 @@ const NavBar = ()=>{
                     </ul>
                 </div>
             </div>
+            <Botones/>
         </nav>
     )
 }
