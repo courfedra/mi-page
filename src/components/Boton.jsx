@@ -1,6 +1,6 @@
 const Boton = ()=>{
     return(
-        <p>Hola</p>
+        <p>Componente Boton</p>
     )
 }
 export default Boton

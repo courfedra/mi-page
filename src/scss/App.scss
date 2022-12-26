@@ -6,76 +6,9 @@
     color: $grisClaro;
 }
 #root{
-    background-color: $blanco;
     min-height: 100vh;
-    background: $negro;
-    .navegador{
-        margin: 0 20px;
-        min-height: 10vh;
-        background-color: $blanco;
-        border-bottom: 2px solid $negro;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        .navbarLogo{
-            text-decoration: none;
-            color: $negro;
-            img{
-                width: 75px;
-            }  
-        }
-        .navbarLink{
-            text-decoration: none;
-            margin: 0 5px;
-            color: $negro;
-            &:hover{
-                color:$grisClaro;
-            }
-        }
-    }
-    .inicio{
-        width: 100%;
-        min-height: 70vh;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .cardInfo{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            h1{
-                color: $grisClaro;
-                display: flex;
-                transition: all .1s ease-in-out;
-                span{
-                    color: $blanco;
-                    padding: 0 15px;
-                    letter-spacing: 1.5px;
-                    filter: drop-shadow(0 0 7.5px $negro);
-                }
-            }
-            h2{
-                letter-spacing: 1.2px;
-            }
-            .btnInfo{
-                padding: 5px 10px;
-                border-radius: 5px;
-                letter-spacing: 2px;
-                color: $negro;
-                background-color: $grisClaro;
-                border: none;
-                transition: all .2s ease-in-out;
-                &:hover{
-                    outline: 2px solid $grisOscuro;
-                }
-            }
-        }
-        
-    }
+    background: $blanco;
+    
     .course{ 
         width: 100%;
         display: flex;
