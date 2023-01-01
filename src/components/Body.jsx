@@ -1,5 +1,3 @@
-import Course from "../pages/Course"
-import Proyects from "../pages/Proyects"
 import {ColorContext} from "../context/ColorContext"
 import { useContext } from "react"
 import styled from "styled-components"

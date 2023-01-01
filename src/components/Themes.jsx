@@ -21,7 +21,7 @@ const GreenTheme={
     texto:"#101010",
     titulo:"#22ff22",
     enlace:"#006622",
-    enlaceHover:"#101010",
+    enlaceHover:"#f5f5f5",
     lineaBorde:"#00ff00"
 };
 
@@ -30,7 +30,7 @@ const WhiteTheme={
     texto:"#101010",
     titulo:"#4d4d4d",
     enlace:"#221e1e",
-    enlaceHover:"#221e1e66",
+    enlaceHover:"#f5f5f5",
     lineaBorde:"#303030"
 };
 

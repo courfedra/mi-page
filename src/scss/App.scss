@@ -268,31 +268,6 @@
             }
         }
     }
-    .pie{
-        border-top: 2px solid $grisClaro;
-        background:linear-gradient(to right, $blanco,$grisClaro);
-        min-height: 15vh;
-        padding: 5px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        ul{
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-            align-items: center;
-            list-style: none;
-            a{
-                text-decoration: none;
-                color: $negro;
-                &:hover{
-                    color: $grisClaro;
-                }
-            }
-        }
-        img{
-            width: 100px;
-        }
-    }
+    
 
 }
