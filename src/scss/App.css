@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+#root .course {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#root .course .courseCard {
+  background-color: #ababab;
+  color: #101010;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px;
+  width: 50%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+#root .course .courseCard h2 {
+  color: #101010;
+}
+#root .course .courseCard p {
+  color: #101010;
+}
+#root .course .courseCard:hover {
+  background-color: #f5f5f5;
+}
+#root .course .courseCard:hover h2 {
+  color: #ff3131;
+}
+#root .course .courseCard .linksDetail {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+#root .course .courseCard .linksDetail .aCardDetail {
+  text-decoration: none;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ff3131;
+  border-radius: 5px;
+  color: #ff3131;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+#root .course .courseCard .linksDetail .aCardDetail:hover {
+  background-color: #ff3131;
+  color: #101010;
+  border: 1px solid #101010;
+}
+#root .course .courseCard .linksDetail .btnCardDetail {
+  text-decoration: none;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #424fff;
+  color: #424fff;
+  background-color: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+#root .course .courseCard .linksDetail .btnCardDetail:hover {
+  background-color: #424fff;
+  color: #101010;
+  border: 1px solid #101010;
+}
+#root .courseDetail {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+#root .courseDetail .courseDetailItem {
+  transition: all 0.1s ease-in-out;
+  border-radius: 15px;
+  width: 75%;
+  margin: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #444444;
+}
+#root .courseDetail .courseDetailItem span {
+  color: #424fff;
+}
+#root .courseDetail .courseDetailItem h3, #root .courseDetail .courseDetailItem h4 {
+  padding: 10px;
+}
+#root .courseDetail .courseDetailItem p {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #424fff;
+}
+#root .courseDetail .courseDetailItem .btnBack {
+  background-color: transparent;
+  padding: 5px 10px;
+  border: 2px solid #424fff;
+  color: #ababab;
+  transition: all 0.1s ease-in-out;
+}
+#root .courseDetail .courseDetailItem:hover {
+  background-color: #f5f5f5;
+}
+#root .courseDetail .courseDetailItem:hover p, #root .courseDetail .courseDetailItem:hover h3, #root .courseDetail .courseDetailItem:hover h4 {
+  color: #101010;
+}
+#root .courseDetail .courseDetailItem:hover .btnBack {
+  color: #101010;
+}
+#root .courseDetail .courseDetailItem:hover .btnBack:hover {
+  outline: 1px solid #424fff;
+}
+#root .proyects {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+#root .proyects .proyectCard {
+  background-color: #444444;
+  box-shadow: 0px 0px 10px 2px #101010;
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .proyects .proyectCard .proyectCardImg {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 2.5px;
+}
+#root .proyects .proyectCard .proyectCardImg img {
+  width: 100%;
+  border-radius: 10px;
+  filter: grayscale(1);
+  transition: all 0.2s ease-in-out;
+}
+#root .proyects .proyectCard .proyectCardImg img:hover {
+  filter: grayscale(0);
+}
+#root .proyects .proyectCard .proyectCardInfo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  padding: 2.5px;
+}
+#root .proyects .proyectCard .proyectCardInfo p {
+  color: #f5f5f5;
+}
+#root .proyects .proyectCard .proyectCardInfo span {
+  color: #5ef082;
+}
+#root .proyects .proyectCard .proyectCardInfo h3, #root .proyects .proyectCard .proyectCardInfo h5 {
+  color: #ababab;
+}
+#root .proyects .proyectCard .proyectCardInfo a {
+  text-align: center;
+  width: 50%;
+  padding: 5px;
+  border-radius: 25px;
+  color: #f5f5f5;
+  text-decoration: none;
+  outline: 1px solid #f5f5f5;
+}
+#root .proyects .proyectCard .proyectCardInfo a:hover {
+  color: #ababab;
+  outline: 1px solid #ababab;
+}
+#root .perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+}
+#root .perfil .cardPerfil {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .perfil .cardPerfil .card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 75%;
+  min-height: 50vh;
+  padding: 5px;
+  text-align: center;
+  background-color: #232323;
+  transition: all 0.25s ease-in-out;
+}
+#root .perfil .cardPerfil .card:hover {
+  background-color: #ababab;
+}
+#root .perfil .cardPerfil .card:hover img {
+  filter: grayscale(0);
+}
+#root .perfil .cardPerfil .card:hover .cardInfo p, #root .perfil .cardPerfil .card:hover h2 {
+  color: #101010;
+}
+#root .perfil .cardPerfil .card:hover .cardInfo span {
+  color: #ff3131;
+  font-style: oblique;
+}
+#root .perfil .cardPerfil .card img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 100%;
+  outline: 1px solid #f5f5f5;
+  background: linear-gradient(45deg, #ababab, #232323);
+  filter: grayscale(1);
+  transition: all 0.25s ease-in-out;
+}
+#root .perfil .cardPerfil .card .cardInfo {
+  transition: all 0.25s ease-in-out;
+  padding: 10px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#root .perfil .cardPerfil .card .cardInfo span {
+  color: #f5f5f5;
+}
+#root .perfil .cardPerfil .numberCard {
+  width: 50%;
+  height: 5vh;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+#root .perfil .cardPerfil .numberCard .active, #root .perfil .cardPerfil .numberCard .noActive {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#root .perfil .cardPerfil .numberCard .active p, #root .perfil .cardPerfil .numberCard .noActive p {
+  color: #ff3131;
+}
+#root .perfil .cardPerfil .numberCard .noActive p {
+  color: #ababab;
+}
+#root .perfil .btnCardPerfil {
+  padding: 10px;
+  margin: 5px;
+  background-color: #232323;
+  border: none;
+  border-radius: 15px;
+  letter-spacing: 1.5px;
+  transition: all 0.25s ease-in-out;
+}
+#root .perfil .btnCardPerfil:hover {
+  background-color: #ababab;
+  color: #101010;
+  outline: 1px solid #424fff;
+}
+#root .pie {
+  border-top: 2px solid #ababab;
+  background: linear-gradient(to right, #f5f5f5, #ababab);
+  min-height: 15vh;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#root .pie ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+#root .pie ul a {
+  text-decoration: none;
+  color: #101010;
+}
+#root .pie ul a:hover {
+  color: #ababab;
+}
+#root .pie img {
+  width: 100px;
+}/*# sourceMappingURL=App.css.map */

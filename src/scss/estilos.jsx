@@ -1,32 +1,29 @@
 import styled from "styled-components"
-import {ColorContext} from "../context/ColorContext"
 import {useContext} from "react"
+import {ColorContext} from "../context/ColorContext"
 
-const {colorBg,colorTxt,colorTitulo}=useContext(ColorContext);
 
-export const Navbar = styled.nav`
-        margin: 0 20px;
+    const {colorBg,colorLineaBorde,colorTxt,colorTitulo,colorEnlace,colorEnlaceHover}=useContext(ColorContext)
+
+    export const Navbar = styled.nav`
+        width: 100%;
         min-height: 10vh;
-        background-color: ${colorBg};
-        color: ${colorTxt};
-        border-bottom: 2px solid ${colorTxt};
+        background-color: ${colorBg}33;
         position: sticky;
+        border-bottom: 2px solid ${colorLineaBorde};
         top: 0;
         z-index: 100;
-        .navbarLogo{
+        `
+
+    export const NavbarLogo = styled.div`
             text-decoration: none;
-            color: ${colorTxt};
-            img{
-                width: 75px;
-            }  
-        }
-        .navbarLink{
+            img{width: 75px}`
+
+    export const NavbarLink = styled.div`
             text-decoration: none;
             margin: 0 5px;
-            color: ${colorTitulo};
-            &:hover{
-                color:${colorBg};
-            }
-        }
-`
-    
+            a{
+                color: ${colorEnlace};
+                &:hover{color:${colorEnlaceHover}}
+            }  
+    `

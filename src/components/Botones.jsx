@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Boton from "./Boton"
 import {useContext} from "react"
 import {ColorContext} from "../context/ColorContext"
 import Themes from "./Themes"
@@ -7,27 +6,59 @@ import Themes from "./Themes"
 const Botones = () => {
     //llevar a contexto
     const {cambioColor}=useContext(ColorContext)
-    const {colorBg,colorTxt,colorTitulo}=useContext(ColorContext)
+    
     const NavbarBotonera = styled.div`
         display: flex;
         margin: 5px;
-        background-color: #f5f5f5;
+        background-color: transparent;
     `
-    const Boton2 = styled.button`
-        color:${colorTitulo};
-        width: 100px;
-        padding: 5px;
+    const BotonWhite = styled.button`
+        width: 30px;
+        height:30px;
+        border-radius: 100%;
         margin: 5px;
-        background-color: ${colorBg};
-        border-bottom: 1px solid ${colorTxt};
-        border-top: 1px solid ${colorTxt};
+        background-color: #f5f5f5;
+        &:hover{
+        background-color: #cccacaaa;
+    }
     `
+    const BotonRed = styled.button`
+    width: 30px;
+    height:30px;
+    border-radius: 100%;
+    margin: 5px;
+    background-color: #f90000;
+    &:hover{
+        background-color: #f90000aa;
+    }
+`
+const BotonBlue = styled.button`
+        width: 30px;
+        height:30px;
+        border-radius: 100%;
+        margin: 5px;
+        background-color: #337aff;
+        &:hover{
+        background-color: #337affaa;
+    }
+    `
+    const BotonGreen = styled.button`
+    width: 30px;
+    height:30px;
+    border-radius: 100%;
+    margin: 5px;
+    background-color: #5ef666;
+    &:hover{
+        background-color: #5ef666aa;
+    }
+`
     return(
         <NavbarBotonera>
-            <Boton2 onClick={()=>{cambioColor(Themes.red)}}>Rojo</Boton2>
-            <Boton2 onClick={()=>{cambioColor(Themes.blue)}}>Azul</Boton2>
-            <Boton2 onClick={()=>{cambioColor(Themes.green)}}>Verde</Boton2>
-            <Boton2 onClick={()=>{cambioColor(Themes.white)}}>Blanco</Boton2>
+            <BotonWhite onClick={()=>{cambioColor(Themes.white)}}></BotonWhite>
+            <BotonRed onClick={()=>{cambioColor(Themes.red)}}></BotonRed>
+            <BotonBlue onClick={()=>{cambioColor(Themes.blue)}}></BotonBlue>
+            <BotonGreen onClick={()=>{cambioColor(Themes.green)}}></BotonGreen>
+            
             
         </NavbarBotonera>
     )
