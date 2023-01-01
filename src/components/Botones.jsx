@@ -57,9 +57,7 @@ const BotonBlue = styled.button`
             <BotonWhite onClick={()=>{cambioColor(Themes.white)}}></BotonWhite>
             <BotonRed onClick={()=>{cambioColor(Themes.red)}}></BotonRed>
             <BotonBlue onClick={()=>{cambioColor(Themes.blue)}}></BotonBlue>
-            <BotonGreen onClick={()=>{cambioColor(Themes.green)}}></BotonGreen>
-            
-            
+            <BotonGreen onClick={()=>{cambioColor(Themes.green)}}></BotonGreen> 
         </NavbarBotonera>
     )
 }

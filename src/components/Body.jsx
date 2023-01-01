@@ -4,7 +4,7 @@ import {ColorContext} from "../context/ColorContext"
 import { useContext } from "react"
 import styled from "styled-components"
 const Body = ()=>{
-    const {colorBg,colorTxt,colorTitulo}=useContext(ColorContext)
+    const {colorBg,colorTxt,colorTitulo,colorLineaBorde,colorEnlace,colorEnlaceHover}=useContext(ColorContext)
 
     const Inicio = styled.main`
         width: 100%;
@@ -22,14 +22,14 @@ const Body = ()=>{
             justify-content: space-around;
             align-items: center;
             h1{
-                color: ${colorTxt};
+                color: ${colorTitulo};
                 display: flex;
                 transition: all .1s ease-in-out;
                 span{
                     color: ${colorTxt};
                     padding: 0 15px;
                     letter-spacing: 1.5px;
-                    filter: drop-shadow(0 0 7.5px ${colorTitulo});
+                    filter: drop-shadow(0 0 7.5px ${colorBg});
                 }
             }
             h2{
@@ -38,15 +38,15 @@ const Body = ()=>{
     `
     const BtnInfo = styled.button`
         padding: 5px 10px;
-                border-radius: 5px;
-                letter-spacing: 2px;
-                color: ${colorTxt};
-                background-color: ${colorBg};
-                border: none;
-                transition: all .2s ease-in-out;
-                &:hover{
-                    outline: 2px solid ${colorTitulo};
-                }
+        border-radius: 5px;
+        letter-spacing: 2px;
+        color: ${colorTxt};
+        background-color: ${colorBg};
+        border: none;
+        transition: all .2s ease-in-out;
+        &:hover{
+            outline: 2px solid ${colorLineaBorde};
+        }
     `
 
     return(
