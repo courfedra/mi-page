@@ -8,7 +8,7 @@ const Footer = ()=>{
 
     const Pie = styled.main`
         border-top: 2px solid ${colorLineaBorde};
-        background:linear-gradient(to bottom, ${colorEnlaceHover}, 75% ,${colorBg});
+        background-color:${colorBg};
         min-height: 15vh;
         padding: 5px;
         width: 100%;

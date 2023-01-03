@@ -20,30 +20,31 @@ const Body = ()=>{
             justify-content: space-around;
             align-items: center;
             h1{
-                color: ${colorTitulo};
+                color: ${colorTxt};
                 display: flex;
                 transition: all .1s ease-in-out;
                 span{
-                    color: ${colorTxt};
+                    color: ${colorTitulo};
                     padding: 0 15px;
                     letter-spacing: 1.5px;
-                    filter: drop-shadow(0 0 7.5px ${colorBg});
                 }
             }
             h2{
                 letter-spacing: 1.2px;
+                color: ${colorTxt};
             }
     `
     const BtnInfo = styled.button`
         padding: 5px 10px;
         border-radius: 5px;
         letter-spacing: 2px;
-        color: ${colorTxt};
+        color: ${colorEnlace};
         background-color: ${colorBg};
-        border: none;
+        border: 1px solid ${colorLineaBorde};
         transition: all .2s ease-in-out;
         &:hover{
-            outline: 2px solid ${colorLineaBorde};
+            border: 2px solid ${colorLineaBorde};
+            color: ${colorEnlaceHover};
         }
     `
 

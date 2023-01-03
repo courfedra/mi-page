@@ -11,7 +11,7 @@ const NavBar = ()=>{
     const Navbar = styled.nav`
         width: 100%;
         min-height: 10vh;
-        background-color: ${colorBg}33;
+        background-color: ${colorBg};
         position: sticky;
         border-bottom: 2px solid ${colorLineaBorde};
         top: 0;
