@@ -4,7 +4,6 @@ import {ColorContext} from "../context/ColorContext"
 import Themes from "./Themes"
 
 const Botones = () => {
-    //llevar a contexto
     const {cambioColor}=useContext(ColorContext)
     const {colorBg,colorTitulo,colorLineaBorde}=useContext(ColorContext)
 
@@ -24,6 +23,7 @@ const Botones = () => {
     `
 
     const BotoneraContainer = styled.div`
+        top: 0;
         background-color: ${colorBg};
         padding: 10px;
         border-radius: 15px;
@@ -31,7 +31,7 @@ const Botones = () => {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        
         
         
     `

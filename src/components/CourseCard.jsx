@@ -1,12 +1,13 @@
 import {Link} from "react-router-dom"
+import { useContext } from "react"
 import {ColorContext} from "../context/ColorContext"
 import styled from "styled-components"
 const CourseCard = ({datos}) =>{
     const {colorBg,colorTxt,colorTitulo,colorLineaBorde,colorEnlace,colorEnlaceHover}=useContext(ColorContext)
-    const courseCard = styled.div`
+    const CourseCardStyled = styled.div`
     
-        background-color: $grisClaro;
-        color: $negro;
+        background-color: ${colorBg};
+        color: ${colorBg};
         border-radius: 15px;
         margin: 5px;
         padding: 5px;
@@ -18,11 +19,11 @@ const CourseCard = ({datos}) =>{
         align-items: center;
         text-align: center;
         transition: all .1s ease-in-out;
-        h2{color:$negro}
-        p{color: $negro}
+        h2{color:${colorBg}}
+        p{color: ${colorBg}}
         &:hover{
-            background-color: $blanco;
-            h2{color:$rojo};
+            background-color: ${colorBg};
+            h2{color:${colorBg}};
         }
         .linksDetail{
             display: flex;
@@ -34,16 +35,16 @@ const CourseCard = ({datos}) =>{
                 width: 200px;
                 padding: 5px;
                 margin: 5px;
-                border: 1px solid $rojo;
+                border: 1px solid ${colorBg};
                 border-radius: 5px;
-                color: $rojo;
+                color: ${colorBg};
                 letter-spacing: 2px;
                 text-transform: uppercase;
                 transition: all .25s ease-in-out;
                 &:hover{
-                    background-color: $rojo;
-                    color: $negro;
-                    border: 1px solid $negro;
+                    background-color: ${colorBg};
+                    color: ${colorBg};
+                    border: 1px solid ${colorBg};
                 }
             }
             .btnCardDetail{
@@ -52,16 +53,16 @@ const CourseCard = ({datos}) =>{
                 padding: 5px;
                 margin: 5px;
                 border-radius: 5px;
-                border: 1px solid $azul;
-                color: $azul;
+                border: 1px solid ${colorBg};
+                color: ${colorBg};
                 background-color: transparent;
                 letter-spacing: 2px;
                 text-transform: uppercase;
                 transition: all .25s ease-in-out;
                 &:hover{
-                    background-color: $azul;
-                    color: $negro;
-                    border: 1px solid $negro;
+                    background-color: ${colorBg};
+                    color: ${colorBg};
+                    border: 1px solid ${colorBg};
                 }  
             }
         }   
@@ -73,14 +74,14 @@ const CourseCard = ({datos}) =>{
 
 
     return(
-        <div className="courseCard">
+        <CourseCardStyled>
             <h2>{datos.curso}</h2>
             <p>{datos.academia}</p>
             <div className="linksDetail">
                 <Link to={`/cursos/${datos.categoria}`}><button className="btnCardDetail">Entrar</button></Link>
                 <a target="_blank" className="aCardDetail" href={datos.certificado}>Certificado</a>
             </div>
-        </div>
+        </CourseCardStyled>
     )
 }
 export default CourseCard
