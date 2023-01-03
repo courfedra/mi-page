@@ -70,8 +70,9 @@ const NavBar = ()=>{
                         </ul>
                     </div>
                 </div>
-                <Botones/>
+                
             </Navbar>
+            <Botones/>
         </>
     )
 }

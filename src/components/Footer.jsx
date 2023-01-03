@@ -22,6 +22,7 @@ const Footer = ()=>{
             list-style: none;
             a{
                 text-decoration: none;
+                letter-spacing: 1.5px;
                 color: ${colorEnlace};
                 &:hover{
                     color: ${colorEnlaceHover};
@@ -40,7 +41,7 @@ const Footer = ()=>{
             <ul>
                 <li><a target="_blank" href="https://www.linkedin.com/in/franandres/">Linkedin</a></li>
                 <li><a target="_blank" href="https://github.com/courfedra">Github</a></li>
-                <li><a target="_blank" href="https://app.flyncer.com/privateProfile">Flyncer</a></li>
+                <li><a target="_blank" href="#">Proximamente</a></li>
             </ul>
         </Pie>
     )
