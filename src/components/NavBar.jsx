@@ -17,7 +17,7 @@ const NavBar = ()=>{
         top: 0;
         z-index: 100;
         `
-    
+
     const NavbarLogo = styled.div`
             text-decoration: none;
             img{width: 75px}`
@@ -28,11 +28,9 @@ const NavBar = ()=>{
             a{
                 color: ${colorEnlace};
                 &:hover{color:${colorEnlaceHover}}
-            }  
+            }
             `
 
-
-            
     return(
         <>
             <Navbar className="navbar navbar-expand-lg ">
@@ -70,9 +68,7 @@ const NavBar = ()=>{
                         </ul>
                     </div>
                 </div>
-                
             </Navbar>
-            <Botones/>
         </>
     )
 }
