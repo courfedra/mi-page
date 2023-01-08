@@ -1,8 +1,8 @@
 import './scss/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import ContextProvider from "./context/ColorContext"
 import NavBar from "./components/NavBar"
-import ColorContextProvider from "./context/ColorContext"
 import Body from "./components/Body"
 import CourseDetailContainer from "./components/CourseDetailContainer"
 import Footer from "./components/Footer"
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <ColorContextProvider>
+      <ContextProvider>
         <BrowserRouter>
         <NavBar/>
           <Routes>
@@ -21,7 +21,7 @@ function App() {
           </Routes>
           <Footer/>
         </BrowserRouter>
-      </ColorContextProvider>      
+      </ContextProvider>      
     </>
   )
 }

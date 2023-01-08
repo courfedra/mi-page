@@ -1,20 +1,14 @@
-import { createContext,useState } from "react"
-export const ColorContext=createContext();
-    const ColorContextProvider = ({children})=>{
+import { createContext } from "react"
+export const Context=createContext();
+    const ContextProvider = ({children})=>{
 
-        //NOMBRE DE PAGINA
-        const [nombrePagina,setNombrePagina]=useState("Fran Andres")
-        //FUNCION CAMBIAR NOMBRE PAGINA
-        const cambioNombrePagina = (nombre) =>{
-            setNombrePagina(nombre)
-        }
-
+        
 
         return(
-            <ColorContext.Provider value={{cambioNombrePagina,nombrePagina}}>
+            <Context.Provider value={{}}>
                 {children}
-            </ColorContext.Provider>
+            </Context.Provider>
         )
     }
 
- export default ColorContextProvider
+ export default ContextProvider

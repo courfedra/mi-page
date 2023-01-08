@@ -1,4 +1,4 @@
-@import "variables";
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 #root{
     min-height: 100vh;
-    background: $blanco;
+    background:#f5f5f5;
     
     
     .courseDetail{
@@ -24,8 +24,8 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: $grisOscuro;
-            span{color:#424fff}
+            background-color: #f5f5f5;
+            span{color:#42ff91}
             h3,h4{padding: 10px;}
             p{
                 padding: 10px;
@@ -36,14 +36,14 @@
                 background-color: transparent;
                 padding: 5px 10px;
                 border: 2px solid #424fff;
-                color: $grisClaro;
+                color: #f5f5f5;
                 transition: all .1s ease-in-out;
             }
             &:hover{
-                background-color: $blanco;
-                p,h3,h4{color:$negro}
+                background-color: #f5f5f5;
+                p,h3,h4{color:#f5f5f5}
                 .btnBack{
-                    color:$negro;
+                    color:#f5f5f5;
                     &:hover{
                         outline: 1px solid #424fff;
                     }
@@ -53,7 +53,7 @@
     }
     
     
-    .perfil{
+   /* .perfil{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -142,6 +142,6 @@
             }
         }
     }
-    
+    */
 
 }

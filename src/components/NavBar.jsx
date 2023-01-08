@@ -12,7 +12,6 @@ const Navbar = styled.nav`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: fixed;
         background-color: ${Theme.colorBg};
         border-bottom: 2px solid ${Theme.colorLineaBorde};
         

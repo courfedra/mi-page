@@ -3,7 +3,7 @@ import Theme from "./Themes"
 
 const H2SubTitulo=styled.h2`
     width: 100%;
-    min-height: 25vh;
+    min-height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;

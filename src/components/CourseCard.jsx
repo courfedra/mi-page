@@ -40,7 +40,7 @@ const ACardDetailStyled=styled.a`
         text-transform: uppercase;
         transition: all .25s ease-in-out;
         &:hover{
-            background-color: ${Theme.colorBg}55;
+            background-color: ${Theme.colorBg};
         }
 `
 const BotonCardDetailStyled=styled.button`
@@ -56,7 +56,7 @@ const BotonCardDetailStyled=styled.button`
         text-transform: uppercase;
         transition: all .25s ease-in-out;
         &:hover{
-            background-color: ${Theme.colorBg}55;
+            background-color: ${Theme.colorBg};
         } 
 `
 

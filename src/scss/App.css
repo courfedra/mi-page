@@ -7,6 +7,96 @@
 #root {
   min-height: 100vh;
   background: #f5f5f5;
+  /* .perfil{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       min-height: 100vh;
+       .cardPerfil{
+           width: 100%;
+           margin: 5px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           .card{
+               display: flex;
+               justify-content: space-evenly;
+               align-items: center;
+               flex-direction:row;
+               width: 75%;
+               min-height: 50vh;
+               padding: 5px;
+               text-align: center;
+               background-color: $grisNegro;
+               transition: all .25s ease-in-out;
+               &:hover{
+                   background-color: $grisClaro;
+                   img{filter: grayscale(0)}
+                   .cardInfo p,h2{color:$negro}
+                   .cardInfo span
+                   {
+                       color:$rojo;
+                       font-style: oblique;
+                   }
+               }
+               img{
+                   width: 100px;
+                   height: 100px;
+                   margin: 5px;
+                   border-radius: 100%;
+                   outline: 1px solid $blanco;
+                   background:linear-gradient(45deg,$grisClaro,$grisNegro);
+                   filter: grayscale(1);
+                   transition: all .25s ease-in-out;
+               }
+               .cardInfo{
+                   transition: all .25s ease-in-out;
+                   padding: 10px;
+                   width: 75%;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   text-align:center;
+                   span{color: $blanco;}
+               }
+           }
+           .numberCard{
+               width: 50%;
+               height: 5vh;
+               padding: 5px;
+               display: flex;
+               justify-content: center;
+               .active{
+                   width: 10%;
+                   display: flex;
+                   justify-content: center;
+                   text-align: center;
+                   p{color: $rojo}
+               }
+               .noActive{
+                   @extend .active;
+                   p{color: $grisClaro;}
+               }
+           }
+       }
+       .btnCardPerfil{
+           padding: 10px;
+           margin: 5px;
+           background-color: $grisNegro;
+           border: none;
+           border-radius: 15px;
+           letter-spacing: 1.5px;
+           transition: all .25s ease-in-out;
+           &:hover{
+               background-color: $grisClaro;
+               color: $negro;
+               outline: 1px solid $azul;
+           }
+       }
+   }
+   */
 }
 #root .courseDetail {
   width: 100%;
@@ -24,10 +114,10 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #444444;
+  background-color: #f5f5f5;
 }
 #root .courseDetail .courseDetailItem span {
-  color: #424fff;
+  color: #42ff91;
 }
 #root .courseDetail .courseDetailItem h3, #root .courseDetail .courseDetailItem h4 {
   padding: 10px;
@@ -41,113 +131,18 @@
   background-color: transparent;
   padding: 5px 10px;
   border: 2px solid #424fff;
-  color: #ababab;
+  color: #f5f5f5;
   transition: all 0.1s ease-in-out;
 }
 #root .courseDetail .courseDetailItem:hover {
   background-color: #f5f5f5;
 }
 #root .courseDetail .courseDetailItem:hover p, #root .courseDetail .courseDetailItem:hover h3, #root .courseDetail .courseDetailItem:hover h4 {
-  color: #101010;
-}
-#root .courseDetail .courseDetailItem:hover .btnBack {
-  color: #101010;
-}
-#root .courseDetail .courseDetailItem:hover .btnBack:hover {
-  outline: 1px solid #424fff;
-}
-#root .perfil {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-}
-#root .perfil .cardPerfil {
-  width: 100%;
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#root .perfil .cardPerfil .card {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  width: 75%;
-  min-height: 50vh;
-  padding: 5px;
-  text-align: center;
-  background-color: #232323;
-  transition: all 0.25s ease-in-out;
-}
-#root .perfil .cardPerfil .card:hover {
-  background-color: #ababab;
-}
-#root .perfil .cardPerfil .card:hover img {
-  filter: grayscale(0);
-}
-#root .perfil .cardPerfil .card:hover .cardInfo p, #root .perfil .cardPerfil .card:hover h2 {
-  color: #101010;
-}
-#root .perfil .cardPerfil .card:hover .cardInfo span {
-  color: #ff3131;
-  font-style: oblique;
-}
-#root .perfil .cardPerfil .card img {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  border-radius: 100%;
-  outline: 1px solid #f5f5f5;
-  background: linear-gradient(45deg, #ababab, #232323);
-  filter: grayscale(1);
-  transition: all 0.25s ease-in-out;
-}
-#root .perfil .cardPerfil .card .cardInfo {
-  transition: all 0.25s ease-in-out;
-  padding: 10px;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-#root .perfil .cardPerfil .card .cardInfo span {
   color: #f5f5f5;
 }
-#root .perfil .cardPerfil .numberCard {
-  width: 50%;
-  height: 5vh;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
+#root .courseDetail .courseDetailItem:hover .btnBack {
+  color: #f5f5f5;
 }
-#root .perfil .cardPerfil .numberCard .active, #root .perfil .cardPerfil .numberCard .noActive {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-#root .perfil .cardPerfil .numberCard .active p, #root .perfil .cardPerfil .numberCard .noActive p {
-  color: #ff3131;
-}
-#root .perfil .cardPerfil .numberCard .noActive p {
-  color: #ababab;
-}
-#root .perfil .btnCardPerfil {
-  padding: 10px;
-  margin: 5px;
-  background-color: #232323;
-  border: none;
-  border-radius: 15px;
-  letter-spacing: 1.5px;
-  transition: all 0.25s ease-in-out;
-}
-#root .perfil .btnCardPerfil:hover {
-  background-color: #ababab;
-  color: #101010;
-  outline: 1px solid #424fff;
+#root .courseDetail .courseDetailItem:hover .btnBack:hover {
+  outline: 1px solid #c49618;
 }/*# sourceMappingURL=App.css.map */
