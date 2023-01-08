@@ -6,7 +6,7 @@ const CourseCardStyled = styled.div`
     border-radius: 15px;
     margin: 5px;
     padding: 5px;
-    width: 75%;
+    width: 80%;
     min-height: 200px;
     display: flex;
     flex-direction: column;

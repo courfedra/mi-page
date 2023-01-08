@@ -5,10 +5,11 @@ const ProyectCardStyled=styled.div`
         border: 1px solid ${Theme.colorLineaBorde};
         margin: 5px;
         padding: 5px;
-        width: 75%;
+        width: 80%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         
 `
 const ProyectCardImgStyled=styled.div`
@@ -24,19 +25,19 @@ const ProyectCardImgStyled=styled.div`
     }
 `
 const ProyectCardInfoStyled=styled.div`
-        width: 50%;
+        width: 80%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
+        text-align: center;
         margin: 5px;
-        padding: 2.5px;
+        padding: 5px;
         a{
             text-align: center;
-            width: 50%;
+            width: 80%;
             padding: 5px;
-            margin: 2.5px;
+            margin: 5px;
             border-radius: 25px;
             color: ${Theme.colorEnlace};
             text-decoration: none;
