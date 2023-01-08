@@ -6,7 +6,7 @@ const CourseCardStyled = styled.div`
     border-radius: 15px;
     margin: 5px;
     padding: 5px;
-    width: 50%;
+    width: 75%;
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@ const CourseCardStyled = styled.div`
 `
 const LinksDetailStyled=styled.div`
         display: flex;
+        flex-direction: column;
         width: 100%;
         justify-content: space-around;
         align-items: center;
@@ -67,7 +68,7 @@ return(
         <p>{datos.academia}</p>
         <LinksDetailStyled>
             <Link to={`/cursos/${datos.categoria}`}><BotonCardDetailStyled>Entrar</BotonCardDetailStyled></Link>
-            <ACardDetailStyled target={_blank} href={datos.certificado}>Certificado</ACardDetailStyled>
+            <ACardDetailStyled target="_blank" href={datos.certificado}>Certificado</ACardDetailStyled>
         </LinksDetailStyled>
     </CourseCardStyled>
     )
