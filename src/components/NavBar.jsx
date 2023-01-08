@@ -23,25 +23,25 @@ const Navbar = styled.nav`
             img{width: 75px}
             `
 
-const NavbarLink = styled.div`
-            margin: 5px;
-            padding: 5px;
-            a{
-                font-size: 1.2em;
-                letter-spacing: 1.5px;
-                color: ${Theme.colorEnlace};
-                text-decoration: none;
-                &:hover{
-                    color:${Theme.colorEnlaceHover}
+    const NavbarLink = styled.div`
+                margin: 5px;
+                padding: 5px;
+                a{
+                    font-size: 1.2em;
+                    letter-spacing: 1.5px;
+                    color: ${Theme.colorEnlace};
+                    text-decoration: none;
+                    &:hover{
+                        color:${Theme.colorEnlaceHover}
+                    }
                 }
-            }
-            
-    `
+                
+        `
 const NavBar = ()=>{
-            const {nombrePagina} = useContext(ColorContext);
+    const {nombrePagina} = useContext(ColorContext);
 
-            return(
-                <>
+    return(
+        <>
             <Navbar>
                 <NavbarLogo>
                     <Link to="/">
