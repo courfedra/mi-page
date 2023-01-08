@@ -1,7 +1,7 @@
 import './scss/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import ContextProvider from "./context/ColorContext"
+import ContextProvider from "./context/Context"
 import NavBar from "./components/NavBar"
 import Body from "./components/Body"
 import CourseDetailContainer from "./components/CourseDetailContainer"

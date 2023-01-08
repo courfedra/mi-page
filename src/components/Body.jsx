@@ -20,11 +20,11 @@ const Body = ()=>{
     return(
         <BodyStyled>
             <Inicio/>
-            <SubTitulo texto="Cursos"/>
+            <SubTitulo id="cursos" texto="Cursos"/>
             <Course/>
-            <SubTitulo texto="Proyectos"/>
+            <SubTitulo id="proyectos" texto="Proyectos"/>
             <Proyects/>
-            <SubTitulo texto="Perfil"/>
+            <SubTitulo id="perfil" texto="Perfil"/>
             <Perfil/>
         </BodyStyled>
     )
