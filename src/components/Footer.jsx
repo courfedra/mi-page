@@ -1,14 +1,10 @@
-import {ColorContext} from "../context/ColorContext"
-import { useContext } from "react"
+import Theme from "./Themes"
 import styled from "styled-components"
 
-const Footer = ()=>{
 
-    const {colorBg,colorTxt,colorTitulo,colorLineaBorde,colorEnlace,colorEnlaceHover}=useContext(ColorContext)
-
-    const Pie = styled.main`
-        border-top: 2px solid ${colorLineaBorde};
-        background-color:${colorBg};
+const Pie = styled.main`
+        border-top: 2px solid ${Theme.colorLineaBorde};
+        background-color:${Theme.colorBg};
         min-height: 15vh;
         padding: 5px;
         width: 100%;
@@ -23,19 +19,20 @@ const Footer = ()=>{
             a{
                 text-decoration: none;
                 letter-spacing: 1.5px;
-                color: ${colorEnlace};
+                color: ${Theme.colorEnlace};
                 &:hover{
-                    color: ${colorEnlaceHover};
+                    color: ${Theme.colorEnlaceHover};
                 }
             }
         }
         img{
             width: 100px;
         }
-    `
+        `
 
+const Footer = ()=>{
 
-    return(
+return(
         <Pie>
             <img src="public/logoShorcut.png" alt="Logo Footer" />
             <ul>

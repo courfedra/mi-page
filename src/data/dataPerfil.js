@@ -1,6 +1,6 @@
 export const dataPerfil=[
     {
-        id:1,
+        id:20,
         img:"https://i.ibb.co/QKgRsTj/FAnoBG.png",
         altImg:"foto perfil",
         titulo:"¡Hola! Soy Francisco",
@@ -12,7 +12,7 @@ export const dataPerfil=[
         parrafoCuarto:"Soy muy autodidacta y me gustan los desafíos"
     },
     {
-        id:2,
+        id:21,
         img:"https://i.ibb.co/6WRsvKn/cocinando.webp",
         altImg:"foto cocina",
         titulo:"¡Me gusta cocinar!",
@@ -24,7 +24,7 @@ export const dataPerfil=[
         parrafoCuarto:"Mis comensales familiares son mi inspiración para satisfacer sus paladares"
     },
     {
-        id:3,
+        id:22,
         img:"https://i.ibb.co/KWwk1pJ/mandatario.jpg",
         altImg:"foto finanza",
         titulo:"Me atraen los números...",
@@ -36,7 +36,7 @@ export const dataPerfil=[
         parrafoCuarto:"El lograr logros de ahorros para cumplimentar proyectos ya sean de compras, viajes, salud, educación, etc."
     },
     {
-        id:4,
+        id:23,
         img:"https://i.ibb.co/wMX4ZKs/corte-fran.jpg",
         altImg:"foto viaje",
         titulo:"¡Que lindo es viajar!",
@@ -48,7 +48,7 @@ export const dataPerfil=[
         parrafoCuarto:"¿Donde me gustaría viajar? Conocer Europa, su historia escondida a traves de los años en sus edificaciones y paisajes que permanecen envueltos en un misterio por descubrir."
     },
     {
-        id:5,
+        id:24,
         img:"https://i.ibb.co/2n0cRLn/escuela-Rock.jpg",
         altImg:"foto docente",
         titulo:"¡Azúca'!",

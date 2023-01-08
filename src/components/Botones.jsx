@@ -4,23 +4,7 @@ import {ColorContext} from "../context/ColorContext"
 import Themes from "./Themes"
 
 const Botones = () => {
-    const {cambioColor}=useContext(ColorContext)
-    const {colorBg,colorTitulo,colorLineaBorde}=useContext(ColorContext)
-
-    
-    const NavbarBotonera = styled.div`
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        margin: 5px;
-        padding-bottom: 5px;
-        border-bottom: 1px dotted ${colorLineaBorde};
-        h6{
-            color:${colorTitulo};
-            letter-spacing: 1.2px;
-        }
-    `
+    const {cambioColor,colorBg,colorLineaBorde}=useContext(ColorContext)
 
     const BotoneraContainer = styled.div`
         top: 0;
@@ -31,9 +15,7 @@ const Botones = () => {
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        
-        
+
     `
 
     const BotonWhite = styled.button`
@@ -80,16 +62,14 @@ const BotonBlue = styled.button`
             transform:scale(1.2);
         }
 `
+
     return(
-        <NavbarBotonera>
-            <h6>¡Explora tu tema favorito!</h6>
             <BotoneraContainer>
                 <BotonWhite onClick={()=>{cambioColor(Themes.white)}}></BotonWhite>
                 <BotonRed onClick={()=>{cambioColor(Themes.red)}}></BotonRed>
                 <BotonBlue onClick={()=>{cambioColor(Themes.blue)}}></BotonBlue>
                 <BotonGreen onClick={()=>{cambioColor(Themes.green)}}></BotonGreen> 
             </BotoneraContainer>
-        </NavbarBotonera>
     )
 }
 export default Botones

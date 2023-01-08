@@ -5,9 +5,9 @@ const NumberCard = ({posicion,totalPag,array}) => {
             {
                 array.map((e)=>{
                     if (e.id===posicion){
-                        return(<DivPosicion clase="active"/>)
+                        return(<DivPosicion key={e.id} clase="active"/>)
                     }else{
-                        return(<DivPosicion clase="noActive"/>)
+                        return(<DivPosicion key={e.id} clase="noActive"/>)
                     }
                 })
             }
