@@ -14,7 +14,6 @@ const PosicionActiveStyled=styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color:green;
     p{color: ${Theme.colorEnlace}}
 `
 
@@ -23,8 +22,7 @@ const PosicionNoActiveStyled=styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color:red;
-    p{color: ${Theme.colorEnlace}}
+    p{color: ${Theme.colorBg}}
 `
 
 const NumberCard = ({posicion,totalPag,array}) => {
@@ -35,13 +33,13 @@ const NumberCard = ({posicion,totalPag,array}) => {
                     if (e.id===posicion){
                         return(
                             <PosicionActiveStyled key={e.id}>
-                                0
+                                <p>0</p>
                             </PosicionActiveStyled>)
                         
                     }else{
                         return(
                             <PosicionNoActiveStyled key={e.id}>
-                            0
+                                <p>0</p>
                             </PosicionNoActiveStyled>)
                     }
                 })
