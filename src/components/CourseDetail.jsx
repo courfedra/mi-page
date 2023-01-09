@@ -28,10 +28,7 @@ const CourseDetailItemStyled=styled.div`
         background-color: ${Theme.colorBg};
         padding: 5px 10px;
         border: 2px solid ${Theme.colorLineaBorde};
-        color: ${Theme.colorEnlace};
         transition: all .1s ease-in-out;
-    }
-    .btnBack{
         color:${Theme.colorEnlace};
         &:hover{
             color: ${Theme.colorEnlaceHover};
