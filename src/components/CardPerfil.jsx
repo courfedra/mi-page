@@ -11,16 +11,20 @@ const CardPerfilStyled=styled.div`
     
 `
 const CardStyled=styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction:row;
-    width: 75%;
-    min-height: 50vh;
-    padding: 5px;
-    text-align: center;
-    border: 2px groove ${Theme.colorLineaBorde};
-    transition: all .25s ease-in-out;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction:row;
+        width: 75%;
+        height: 70vh;
+        padding: 5px;
+        text-align: center;
+        border: 2px groove ${Theme.colorLineaBorde};
+        transition: all .25s ease-in-out;
+    @media screen and (max-width:900px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 const ImgCard=styled.img`
@@ -55,9 +59,6 @@ const CardPerfil = ({datos,posicion,totalPag,array}) => {
 
                     <p>{datos.parrafoSegundoInicio}<span>{datos.parrafoSpan}</span>{datos.parrafoSegundoFinal}</p>
 
-                    <p>{datos.parrafoTercero}</p>
-                    
-                    <p>{datos.parrafoCuarto}</p>
                 </CardInfoStyled>
             </CardStyled>
             <NumberCard posicion={posicion} totalPag={totalPag} array={array}/>

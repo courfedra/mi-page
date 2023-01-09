@@ -14,7 +14,7 @@ const PosicionActiveStyled=styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    p{color: ${Theme.colorEnlace}}
+    p{color: ${Theme.colorBg}}
 `
 
 const PosicionNoActiveStyled=styled.div`
@@ -22,10 +22,10 @@ const PosicionNoActiveStyled=styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    p{color: ${Theme.colorBg}}
+    p{color: ${Theme.colorEnlace}}
 `
 
-const NumberCard = ({posicion,totalPag,array}) => {
+const NumberCard = ({posicion,array}) => {
     return(
         <NumberCardStyled>
             {
