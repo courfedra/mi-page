@@ -16,7 +16,7 @@ const CardStyled=styled.div`
         align-items: center;
         flex-direction:row;
         width: 75%;
-        height: 70vh;
+        min-height: 70vh;
         padding: 5px;
         text-align: center;
         border: 2px groove ${Theme.colorLineaBorde};

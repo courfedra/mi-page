@@ -9,7 +9,6 @@ const H2SubTitulo=styled.div`
     justify-content: center;
     align-items: center;
     letter-spacing: 5px;
-    //background-color: ${Theme.colorBg};
     background-image: url("https://i.ibb.co/XFJHff7/react-Back-Ground.jpg");
     background-size: cover;
     background-attachment:fixed ; 
