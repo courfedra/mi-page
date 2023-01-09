@@ -1,6 +1,7 @@
 
 const Theme={
     colorBg:"#1e3a2a",
+    colorBgHover:"#2d2b3b",
     colorTxt:"#101010",
     colorTitulo:"#3dc37d",
     colorEnlace:"#e9c893",

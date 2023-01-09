@@ -2,6 +2,14 @@ import {useParams} from "react-router-dom"
 import {dataCourse as data} from "../data/dataCourse"
 import CourseDetail from "./CourseDetail"
 import {useState,useEffect} from "react"
+import styled from "styled-components"
+
+const CourseDetailStyled=styled.div`
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+`
 
 const CourseDetailContainer = () => {
     
@@ -12,9 +20,9 @@ const CourseDetailContainer = () => {
        setDatos(data.find(item=>item.categoria==idCategory))
     },[])
     return(
-        <div className="courseDetail">
+        <CourseDetailStyled>
             <CourseDetail datos={datos}/>
-        </div>
+        </CourseDetailStyled>
     )
 }
 export default CourseDetailContainer
