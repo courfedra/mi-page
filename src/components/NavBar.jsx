@@ -27,7 +27,7 @@ const NavBar = ()=>{
                     <Link to="/perfil">Perfil</Link>
                 </div>
                 <HambMenuStyled onClick={mostrarMenu}>
-                    <RxHamburgerMenu fontSize={"2em"} color={"#e9c893"}/>
+                    X
                 </HambMenuStyled>
             </Navbar>
         </>
