@@ -50,7 +50,6 @@ const Navbar = styled.nav`
         transition: all .5s ease-in-out;
         margin: 5px;
         padding: 5px;
-        position: relative;
         a{
             font-size: 1.2em;
             letter-spacing: 1.5px;
@@ -77,8 +76,10 @@ const Navbar = styled.nav`
         }
     }
     .navbarLink.active{
-        position: absolute;
-        left: 0;
+        @media screen and (max-width:900px) {
+            position: absolute;
+            left: 0;
+        }
     }    
 `
     
