@@ -3,9 +3,39 @@ import styled from "styled-components"
 import Theme from "./Themes"
 import logoPage from "../../public/logoPage.svg"
 import {RxHamburgerMenu} from "react-icons/Rx"
-import { useEffect } from "react"
+import { useState } from "react"
 
-let topPosition="100px"
+const NavBar = ()=>{
+    
+    const [clicked,setClicked]=useState(false)
+    
+    const mostrarMenu=()=>{
+        clicked?setClicked(false):setClicked(true)
+    }
+    return(
+        <>
+            <Navbar>
+                <NavbarLogo>
+                    <Link to="/">
+                        <img src={logoPage} alt="Logo Franandres"/>
+                    </Link>
+                </NavbarLogo>
+                <div className={`navbarLink ${clicked?'active':''}`}>
+                    <Link to="/">Inicio</Link>
+                    <Link to="/cursos">Cursos</Link>
+                    <Link to="/proyectos">Proyectos</Link>
+                    <Link to="/perfil">Perfil</Link>
+                </div>
+                <HambMenuStyled onClick={mostrarMenu}>
+                    <RxHamburgerMenu fontSize={"2em"} color={"#e9c893"}/>
+                </HambMenuStyled>
+            </Navbar>
+        </>
+    )
+}
+
+export default NavBar
+
 
 const Navbar = styled.nav`
     width: 100%;
@@ -15,7 +45,41 @@ const Navbar = styled.nav`
     justify-content: space-between;
     align-items: center;
     background-color: ${Theme.colorBg};
-    border-bottom: 2px solid ${Theme.colorLineaBorde};    
+    border-bottom: 2px solid ${Theme.colorLineaBorde};
+    .navbarLink{
+        transition: all 1s ease-in-out;
+        margin: 5px;
+        padding: 5px;
+        position: relative;
+        a{
+            font-size: 1.2em;
+            letter-spacing: 1.5px;
+            color: ${Theme.colorEnlace};
+            text-decoration: none;
+            padding: 5px;
+            margin: 5px;
+            &:hover{
+                color:${Theme.colorEnlaceHover}
+            }
+        }
+        @media screen and (max-width:900px) {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 100px;
+            width: 100%;
+            left: -500px;
+            right: 0;
+            background-color: ${Theme.colorBg};
+        }
+    }
+    .navbarLink.active{
+        position: absolute;
+        left: 0;
+    }    
 `
     
 const NavbarLogo = styled.div`
@@ -26,35 +90,6 @@ const NavbarLogo = styled.div`
     }
 `
 
-const NavbarLink = styled.div`
-    margin: 5px;
-    padding: 5px;
-    a{
-        font-size: 1.2em;
-        letter-spacing: 1.5px;
-        color: ${Theme.colorEnlace};
-        text-decoration: none;
-        padding: 5px;
-        margin: 5px;
-        &:hover{
-            color:${Theme.colorEnlaceHover}
-        }
-    }
-    @media screen and (max-width:900px) {
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        top: ${topPosition};
-        width: 100%;
-        left: 0;
-        right: 0;
-        background-color: ${Theme.colorBg};
-    }
-    
-    `
 const HambMenuStyled = styled.button`
     display: none;
     @media screen and (max-width:900px){
@@ -69,34 +104,5 @@ const HambMenuStyled = styled.button`
             background-color: ${Theme.colorBgHover};
         }
     }
-    `
-const mostrarMenu=()=>{
-    console.log("Active el menu");
-}
+`
 
-
-const NavBar = ()=>{
-
-    return(
-        <>
-            <Navbar>
-                <NavbarLogo>
-                    <Link to="/">
-                        <img src={logoPage} alt="Logo Franandres"/>
-                    </Link>
-                </NavbarLogo>
-                <NavbarLink>
-                    <Link to="/">Inicio</Link>
-                    <Link to="/cursos">Cursos</Link>
-                    <Link to="/proyectos">Proyectos</Link>
-                    <Link to="/perfil">Perfil</Link>
-                </NavbarLink>
-                <HambMenuStyled onClick={mostrarMenu}>
-                    <RxHamburgerMenu fontSize={"1.5em"} color={"#e9c893"}/>
-                </HambMenuStyled>
-            </Navbar>
-        </>
-    )
-}
-
-export default NavBar
