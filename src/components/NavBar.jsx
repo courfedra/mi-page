@@ -47,7 +47,7 @@ const Navbar = styled.nav`
     background-color: ${Theme.colorBg};
     border-bottom: 2px solid ${Theme.colorLineaBorde};
     .navbarLink{
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
         margin: 5px;
         padding: 5px;
         position: relative;
@@ -71,7 +71,7 @@ const Navbar = styled.nav`
             align-items: center;
             top: 100px;
             width: 100%;
-            left: -500px;
+            left: -1500px;
             right: 0;
             background-color: ${Theme.colorBg};
         }
