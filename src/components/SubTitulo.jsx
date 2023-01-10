@@ -13,21 +13,12 @@ const H2SubTitulo=styled.div`
     background-size: cover;
     background-attachment:fixed ; 
     color: ${Theme.colorTitulo};
-    a{
-        color:${Theme.colorEnlace};
-        padding: 5px;
-        text-decoration: none;
-        &:hover{
-            color:${Theme.colorEnlaceHover}
-        }
-    }
     
 `
-const SubTitulo = ({texto,id})=>{
+const SubTitulo = ({texto})=>{
     return(
         <H2SubTitulo>
-            <h2 id={id}>{texto}</h2>
-            <a href="#inicio">Volver a Inicio</a>
+            <h2>{texto}</h2>
         </H2SubTitulo>
     )
 }

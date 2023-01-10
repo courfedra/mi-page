@@ -8,7 +8,7 @@ const CardInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("https://i.ibb.co/Cb6sLtv/paint-5699263-1920.jpg");
+    background-image: url("https://i.ibb.co/bbJbMBW/wallpaperflare-com-wallpaper.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
