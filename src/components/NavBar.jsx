@@ -26,7 +26,9 @@ const NavBar = ()=>{
                     <Link to="/perfil">Perfil</Link>
                 </div>
                 <HambMenuStyled onClick={mostrarMenu}>
-                    X
+                    {clicked
+                        ?<img src={"https://cdn-icons-png.flaticon.com/512/64/64498.png"} alt="iconoMenu"/>
+                        :<img src={"https://cdn-icons-png.flaticon.com/512/6499/6499731.png"} alt="iconoMenu"/>}
                 </HambMenuStyled>
             </Navbar>
         </>
@@ -94,15 +96,17 @@ const HambMenuStyled = styled.button`
     display: none;
     @media screen and (max-width:900px){
         background-color: transparent;
-        padding: 5px;
+        width: 25%;
+        padding: 0 10px;
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
         border: none;
-        border-radius: 10px;
-        &:active{
-            background-color: ${Theme.colorBgHover};
+        transition:all .5s ease-in-out;
+        img{
+            width: 25%;
         }
+        
     }
 `
 
