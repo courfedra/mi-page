@@ -2,7 +2,6 @@ import{Link} from "react-router-dom"
 import styled from "styled-components"
 import Theme from "./Themes"
 import logoPage from "../../public/logoPage.svg"
-import {RxHamburgerMenu} from "react-icons/Rx"
 import { useState } from "react"
 
 const NavBar = ()=>{
