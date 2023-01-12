@@ -1,7 +1,47 @@
 import CourseCard from "../components/CourseCard"
-import {dataCourse as data} from "../data/dataCourse"
+import Loading from "../components/Loading"
 import styled from "styled-components"
+import { useState,useEffect } from "react"
+import {db} from "../data/firebaseConfig"
+import { collection, getDocs,query,orderBy } from "firebase/firestore"; 
 
+const Course=()=>{
+    
+    const [datos,setDatos] = useState([]);
+
+    useEffect(()=>{
+        const dbAsync= async()=>{
+            //para cambiar categorias
+            let q=query(collection(db, "cursos"),orderBy("orden"))
+            const querySnapshot = await getDocs(q);
+            //metodo "docs" convierte array de documentos a array de objetos
+            const dataFromFirestone = querySnapshot.docs.map(item=>({
+                id:item.id,
+                ...item.data()
+            }))
+            return dataFromFirestone;
+        }
+
+        dbAsync()
+            .then(result=>setDatos(result))
+            .catch(err=>console.log(err))
+    },[]);
+
+return(
+    <CourseStyled>
+        {
+            datos.lenght != 0 
+            ?datos.map((e)=>{return(<CourseCard datos={e} key={e.id}/>)})
+            :<Loading/>
+            
+        }    
+    </CourseStyled>
+    )
+}
+
+export default Course
+    
+    
 const CourseStyled = styled.div`
     width: 100%;
     margin: 20px 0;
@@ -11,15 +51,3 @@ const CourseStyled = styled.div`
     align-items: center;
     padding: 10px; 
 `
-
-const Course=()=>{
-
-return(
-    <CourseStyled>
-    {
-        data.map((e)=>{return(<CourseCard datos={e} key={e.id}/>)})
-    }    
-    </CourseStyled>
-    )
-}
-export default Course

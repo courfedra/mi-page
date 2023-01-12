@@ -2,6 +2,21 @@ import {Link} from "react-router-dom"
 import Theme from "../components/Themes"
 import styled from "styled-components"
 
+const CourseCard = ({datos}) =>{
+
+return(
+    <CourseCardStyled>
+        <h2>{datos.curso}</h2>
+        <p>{datos.academia}</p>
+        <LinksDetailStyled>
+            <Link to={`/cursos/${datos.categoria}`}><BotonCardDetailStyled>Entrar</BotonCardDetailStyled></Link>
+            <ACardDetailStyled target="_blank" href={datos.certificado}>Certificado</ACardDetailStyled>
+        </LinksDetailStyled>
+    </CourseCardStyled>
+    )
+}
+export default CourseCard
+
 const CourseCardStyled = styled.div`
     border-radius: 15px;
     margin: 5px;
@@ -59,18 +74,3 @@ const BotonCardDetailStyled=styled.button`
             background-color: ${Theme.colorBg};
         } 
 `
-
-const CourseCard = ({datos}) =>{
-
-return(
-    <CourseCardStyled>
-        <h2>{datos.curso}</h2>
-        <p>{datos.academia}</p>
-        <LinksDetailStyled>
-            <Link to={`/cursos/${datos.categoria}`}><BotonCardDetailStyled>Entrar</BotonCardDetailStyled></Link>
-            <ACardDetailStyled target="_blank" href={datos.certificado}>Certificado</ACardDetailStyled>
-        </LinksDetailStyled>
-    </CourseCardStyled>
-    )
-}
-export default CourseCard

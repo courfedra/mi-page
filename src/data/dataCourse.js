@@ -31,7 +31,7 @@ export const dataCourse = [
         categoria:"reactjs",
         profesor:"Alex Marin Mendez",
         academia:"Coderhouse",
-        certificado:"#",
+        certificado:"https://www.coderhouse.com/certificados/63aede3b0e7c4d000ef38581",
         descripcion:"Welcome to the tutorial! We'll be building a small, but feature-rich app that lets you keep track of your contacts. We expect it to take between 30-60m if you're following along. Welcome to the tutorial! We'll be building a small, but feature-rich app that lets you keep track of your contacts. We expect it to take between 30-60m if you're following along.",
         id:3
     },
