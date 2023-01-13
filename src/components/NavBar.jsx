@@ -80,6 +80,7 @@ const Navbar = styled.nav`
         @media screen and (max-width:900px) {
             position: absolute;
             left: 0;
+            z-index: 10;
         }
     }    
 `

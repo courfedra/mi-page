@@ -6,7 +6,7 @@ const CourseCard = ({datos}) =>{
 
     return (
         <CourseCardStyled>
-            {datos.length!==0
+            {datos.length==0
             ?datos.map((e)=>{return(<CourseItem datos={e} key={e.id}/>)})
             :<Loading/>
         }
