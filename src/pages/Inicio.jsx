@@ -1,17 +1,42 @@
 import styled from "styled-components"
 import Theme from "../components/Themes"
 
+const Inicio =()=>{
+
+return(
+    <CardInfo>
+        <CardPresentation>
+            <h1>Hola, soy<span>Francisco Andres</span></h1>
+            <h2><i>Frontend Developer</i><span className="continueWriting">_</span></h2>
+            <BtnInfo>Descargar CV</BtnInfo>
+        </CardPresentation>
+    </CardInfo>
+    )
+}
+export default Inicio
+
 const CardInfo = styled.div`
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
     background-image: url("https://i.ibb.co/bbJbMBW/wallpaperflare-com-wallpaper.jpg");
     background-size: auto;
     background-attachment: fixed;
     background-position: center;
+    
+`
+
+const CardPresentation=styled.div`
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    text-align: center;
     h1{
         color: ${Theme.LineaBorde};
         display: flex;
@@ -28,7 +53,30 @@ const CardInfo = styled.div`
     h2{
         letter-spacing: 1.2px;
         color: ${Theme.colorTxt};
+        .continueWriting{
+            animation: animate .4s infinite alternate;
+            @keyframes animate {
+                from{
+                    color: transparent;
+                };
+                to{
+                    color: ${Theme.colorTxt};
+                }
+            }
+        }
     }
+    animation: 5s ease-in-out 1s infinite alternate moveTop;
+            @keyframes moveTop {
+                0%{
+                    position: absolute;
+                    top: 5%;
+                };
+                100%{
+                    position: absolute;
+                    top: 20%;
+                }
+            }
+    
 `
 
 const BtnInfo = styled.button`
@@ -42,17 +90,6 @@ const BtnInfo = styled.button`
     transition: all .2s ease-in-out;
     &:hover{
         color: ${Theme.colorEnlaceHover};
+        background-color: ${Theme.colorBgHover};
     }
 `
-
-const Inicio =()=>{
-
-return(
-    <CardInfo>
-        <h1>Hola, soy<span>Francisco Andres</span></h1>
-        <h2>Frontend Developer</h2>
-        <BtnInfo>Descargar CV</BtnInfo>
-    </CardInfo>
-    )
-}
-export default Inicio

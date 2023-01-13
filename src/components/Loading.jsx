@@ -4,7 +4,7 @@ const Loading = () =>{
 
     return(
         <LoadingStyled>
-                <p>Loading...</p>
+                Loading...
         </LoadingStyled>
         )
     }
@@ -16,4 +16,5 @@ const LoadingStyled=styled.div`
     display:flex;
     justify-content: center;
     align-items: center;
+
 `
