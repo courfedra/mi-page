@@ -9,7 +9,7 @@ const CardInfo = styled.div`
     justify-content: center;
     align-items: center;
     background-image: url("https://i.ibb.co/bbJbMBW/wallpaperflare-com-wallpaper.jpg");
-    background-size: cover;
+    background-size: auto;
     background-attachment: fixed;
     background-position: center;
     h1{

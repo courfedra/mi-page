@@ -29,12 +29,7 @@ const Course=()=>{
 
 return(
     <CourseStyled>
-        {
-            datos.lenght != 0 
-            ?datos.map((e)=>{return(<CourseCard datos={e} key={e.id}/>)})
-            :<Loading/>
-            
-        }    
+        <CourseCard datos={datos}/>   
     </CourseStyled>
     )
 }
@@ -44,6 +39,7 @@ export default Course
     
 const CourseStyled = styled.div`
     width: 100%;
+    min-height:50vh;
     margin: 20px 0;
     display: flex;
     flex-direction: column;

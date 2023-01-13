@@ -1,5 +1,7 @@
 import styled from "styled-components"
+import { useEffect } from "react"
 const Loading = () =>{
+
     return(
         <LoadingStyled>
                 <p>Loading...</p>

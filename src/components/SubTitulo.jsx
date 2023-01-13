@@ -11,7 +11,8 @@ const H2SubTitulo=styled.div`
     letter-spacing: 5px;
     background-image: url("https://i.ibb.co/XFJHff7/react-Back-Ground.jpg");
     background-size: cover;
-    background-attachment:fixed ; 
+    background-attachment:fixed;
+    background-position: center;
     color: ${Theme.colorTitulo};
     
 `
