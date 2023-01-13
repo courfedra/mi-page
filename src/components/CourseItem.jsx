@@ -4,20 +4,20 @@ import Theme from "../components/Themes"
 
 const CourseItem=({datos})=>{
     return(
-        <CourseCardStyled>
+        <CourseItemStyled>
             <h2>{datos.curso}</h2>
             <p>{datos.academia}</p>
             <LinksDetailStyled>
                 <Link to={`/cursos/${datos.categoria}`}><BotonCardDetailStyled>Entrar</BotonCardDetailStyled></Link>
                 <ACardDetailStyled target="_blank" href={datos.certificado}>Certificado</ACardDetailStyled>
             </LinksDetailStyled>
-        </CourseCardStyled>
+        </CourseItemStyled>
     )
 }
 export default CourseItem
 
 
-const CourseCardStyled = styled.div`
+const CourseItemStyled = styled.div`
     border-radius: 15px;
     margin: 5px;
     padding: 5px;

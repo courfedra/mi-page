@@ -5,18 +5,18 @@ import Loading from "./Loading"
 const CourseCard = ({datos}) =>{
 
     return (
-        <CourseItemStyled>
+        <CourseCardStyled>
             {datos.length!==0
             ?datos.map((e)=>{return(<CourseItem datos={e} key={e.id}/>)})
             :<Loading/>
         }
-        </CourseItemStyled>
+        </CourseCardStyled>
     )
 }
 
 export default CourseCard
 
-const CourseItemStyled=styled.div`
+const CourseCardStyled=styled.div`
     width: 100%;
     display:flex;
     flex-direction:column;

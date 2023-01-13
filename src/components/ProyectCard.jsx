@@ -1,89 +1,26 @@
 import styled from "styled-components"
 import Theme from "./Themes"
-
-const ProyectCardStyled=styled.div`
-        border: 1px solid ${Theme.colorLineaBorde};
-        margin: 5px;
-        padding: 5px;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-`
-const ProyectCardImgStyled=styled.div`
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    padding: 2.5px;
-    img{
-        width: 100%;
-        border-radius: 10px;
-    }
-`
-const ProyectCardInfoStyled=styled.div`
-        width: 80%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 5px;
-        padding: 5px;
-        a{
-            text-align: center;
-            width: 80%;
-            padding: 5px;
-            margin: 5px;
-            border-radius: 25px;
-            color: ${Theme.colorEnlace};
-            text-decoration: none;
-            outline: 1px solid ${Theme.colorLineaBorde};
-            &:hover{
-                color: ${Theme.colorEnlaceHover};
-                background-color: ${Theme.colorBg};
-            }
-        }
-        
-        
-`
-
-const NameAndTecnology=styled.div`
-    h3{
-        color: ${Theme.colorTxt};
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 2.5px;
-    }
-    span{
-        color: ${Theme.colorTitulo};
-        padding: 2.5px;
-    }
-        
-`
+import ProyectItem from "./ProyectItem"
+import Loading from "./Loading"
 
 const ProyectCard = ({datos})=>{
     return(
         <ProyectCardStyled>
-            <ProyectCardImgStyled>
-              <img src={datos.foto}/>
-            </ProyectCardImgStyled>
-            <ProyectCardInfoStyled>
-                <NameAndTecnology>
-                    <h3>Nombre del proyecto: <span>{datos.nombre}</span></h3>
-                    <h3>Tecnología predominante: <span>{datos.sector}</span></h3>
-                </NameAndTecnology>
-                <a target="_blank" href={datos.linkRepo}>Link al repositorio</a>
-                <a target="_blank" href={datos.linkPage}>Link al sitio web</a>
-                <p>{datos.descripcion}</p>
-            </ProyectCardInfoStyled>
-            
+            {datos.length!==0
+            ?datos.map((e)=>{return(<ProyectItem datos={e} key={e.id}/>)})
+            :<Loading/>} 
         </ProyectCardStyled>
     )
 }
 export default ProyectCard
+
+const ProyectCardStyled=styled.div`
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+`
