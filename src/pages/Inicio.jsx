@@ -65,11 +65,11 @@ const CardPresentation=styled.div`
             }
         }
     }
-    animation: 5s ease-in-out 1s infinite alternate moveTop;
+    animation: 5s ease-in-out .5s infinite alternate moveTop;
             @keyframes moveTop {
                 0%{
                     position: absolute;
-                    top: 5%;
+                    top: 0%;
                 };
                 100%{
                     position: absolute;

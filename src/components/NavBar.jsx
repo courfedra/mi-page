@@ -7,10 +7,11 @@ import { useState } from "react"
 const NavBar = ()=>{
     
     const [clicked,setClicked]=useState(false)
-    
+
     const mostrarMenu=()=>{
         clicked?setClicked(false):setClicked(true)
     }
+
     return(
         <>
             <Navbar>
@@ -26,9 +27,11 @@ const NavBar = ()=>{
                     <Link to="/perfil">Perfil</Link>
                 </div>
                 <HambMenuStyled onClick={mostrarMenu}>
-                    {clicked
-                        ?<img src={"https://cdn-icons-png.flaticon.com/512/64/64498.png"} alt="iconoMenu"/>
-                        :<img src={"https://cdn-icons-png.flaticon.com/512/6499/6499731.png"} alt="iconoMenu"/>}
+                    <button className={`buttonBurger ${clicked}Active`}>
+                        <div className="burgerLine"></div>
+                        <div className="burgerLine"></div>
+                        <div className="burgerLine"></div>
+                    </button>  
                 </HambMenuStyled>
             </Navbar>
         </>
@@ -97,17 +100,52 @@ const HambMenuStyled = styled.button`
     display: none;
     @media screen and (max-width:900px){
         background-color: transparent;
-        width: 25%;
-        padding: 0 10px;
+        width: auto;
         display: flex;
         justify-content: end;
         align-items: center;
         border: none;
         transition:all .5s ease-in-out;
-        img{
-            width: 25%;
+        .buttonBurger{
+            border:none;
+            background-color: transparent;
+            .burgerLine{
+                background-color: ${Theme.colorEnlace};
+                width: 25px;
+                height: 2px;
+                margin: 5px;
+                transition: all .25s ease-in-out;              
+            }
+            
+        }
+        .falseActive{
+            //burger
+        }
+
+        .trueActive{
+            //cruz
+            .burgerLine:nth-child(1){
+                transform:rotate(45deg) translate(5px,5px);
+            }
+            .burgerLine:nth-child(2){
+                transform:translateX(20px);
+                background-color:transparent
+            }
+            .burgerLine:nth-child(3){
+                transform:rotate(-45deg) translate(5px,-5px)
+            }
         }
         
     }
+
+
+
+
+
+
 `
+
+    
+    
+
 
