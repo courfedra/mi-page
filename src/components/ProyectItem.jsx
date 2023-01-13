@@ -13,8 +13,8 @@ const ProyectItem=({datos})=>{
                     <h3>Nombre del proyecto: <span>{datos.nombre}</span></h3>
                     <h3>Tecnología predominante: <span>{datos.sector}</span></h3>
                 </NameAndTecnology>
-                <a target="_blank" href={datos.linkRepo}>Link al repositorio</a>
-                <a target="_blank" href={datos.linkPage}>Link al sitio web</a>
+                <a className="aButton" target="_blank" href={datos.linkRepo}>Link al repositorio</a>
+                <a className="aButton" target="_blank" href={datos.linkPage}>Link al sitio web</a>
                 <p>{datos.descripcion}</p>
             </ProyectCardInfoStyled>
         </ProyectItemStyled>
@@ -59,18 +59,19 @@ const ProyectCardInfoStyled=styled.div`
         text-align: center;
         margin: 5px;
         padding: 5px;
-        a{
+        .aButton{
             text-align: center;
             width: 80%;
             padding: 5px;
             margin: 5px;
             border-radius: 25px;
             color: ${Theme.colorEnlace};
+            background-color: ${Theme.colorBg};
             text-decoration: none;
             outline: 1px solid ${Theme.colorLineaBorde};
             &:hover{
                 color: ${Theme.colorEnlaceHover};
-                background-color: ${Theme.colorBg};
+                background-color: ${Theme.colorBgHover};
             }
         }
         

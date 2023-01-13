@@ -19,7 +19,7 @@ const ProyectCardStyled=styled.div`
         padding: 5px;
         width: 80%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
         
