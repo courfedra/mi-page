@@ -118,17 +118,14 @@ const HambMenuStyled = styled.button`
             }
             
         }
-        .falseActive{
-            //burger
-        }
-
+        
         .trueActive{
             //cruz
             .burgerLine:nth-child(1){
                 transform:rotate(45deg) translate(5px,5px);
             }
             .burgerLine:nth-child(2){
-                transform:translateX(20px);
+                transform:translateX(-30px);
                 background-color:transparent
             }
             .burgerLine:nth-child(3){
