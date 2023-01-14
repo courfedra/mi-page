@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import Inicio from './Inicio'
 import Skills from "./Skills"
-import SubTitulo from "../SubTitulo"
-
 
 const BodyStyled = styled.main`
         width: 100%;
@@ -17,7 +15,6 @@ const Body = ()=>{
     return(
         <BodyStyled>
             <Inicio/>
-            <SubTitulo texto="Hard Skills"/>
             <Skills/>
         </BodyStyled>
     )
