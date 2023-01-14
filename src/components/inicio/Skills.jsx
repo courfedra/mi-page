@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Theme from "./Themes"
+import Theme from "../Themes"
 
 const Skills =()=>{
     return(
@@ -21,5 +21,5 @@ const HardSkillsStyled=styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: violet;
+    background-color: ${Theme.colorBg};
 `

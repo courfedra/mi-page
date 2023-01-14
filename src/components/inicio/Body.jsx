@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import Inicio from "../pages/Inicio"
+import Inicio from './Inicio'
 import Skills from "./Skills"
-import SubTitulo from "./SubTitulo"
+import SubTitulo from "../SubTitulo"
 
 
 const BodyStyled = styled.main`

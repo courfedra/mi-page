@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Theme from "../components/Themes"
+import Theme from "../Themes"
 
 const Inicio =()=>{
 

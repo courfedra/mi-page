@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import ContextProvider from "./context/Context"
 import NavBar from "./components/NavBar"
-import Body from "./components/Body"
-import Course from './pages/Course';
-import Proyects from './pages/Proyects';
-import Perfil from './pages/Perfil';
-import CourseDetailContainer from "./components/CourseDetailContainer"
+import Body from './components/inicio/Body';
+import Course from './components/cursos/Course';
+import Proyects from './components/proyectos/Proyects';
+import Perfil from './components/perfil/Perfil';
+import CourseDetailContainer from './components/cursos/CourseDetailContainer'
 import Footer from "./components/Footer"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 

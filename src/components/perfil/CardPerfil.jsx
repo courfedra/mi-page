@@ -1,5 +1,5 @@
-import NumberCard from "../components/NumberCard"
-import Theme from "./Themes"
+import NumberCard from "./NumberCard"
+import Theme from "../Themes"
 import styled from "styled-components"
 
 const CardPerfilStyled=styled.div`

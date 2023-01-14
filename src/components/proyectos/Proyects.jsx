@@ -1,18 +1,18 @@
-import CourseCard from "../components/CourseCard"
-import Loading from "../components/Loading"
-import styled from "styled-components"
+import ProyectCard from "./ProyectCard"
 import { useState,useEffect } from "react"
-import {db} from "../data/firebaseConfig"
+import styled from "styled-components"
+import {db} from "../../data/firebaseConfig"
 import { collection, getDocs,query,orderBy } from "firebase/firestore"; 
 
-const Course=()=>{
-    
-    const [datos,setDatos] = useState([]);
 
+const Proyects = ()=>{
+
+    const [datos,setDatos] = useState([]);
+    
     useEffect(()=>{
         const dbAsync= async()=>{
             //para cambiar categorias
-            let q=query(collection(db, "cursos"),orderBy("orden"))
+            let q=query(collection(db, "proyectos"),orderBy("orden"))
             const querySnapshot = await getDocs(q);
             //metodo "docs" convierte array de documentos a array de objetos
             const dataFromFirestone = querySnapshot.docs.map(item=>({
@@ -27,23 +27,18 @@ const Course=()=>{
             .catch(err=>console.log(err))
     },[]);
 
-return(
-    <CourseStyled>
-        <CourseCard datos={datos}/>   
-    </CourseStyled>
+    return(
+        <ProyectStyled>
+            <ProyectCard datos={datos}/>
+        </ProyectStyled>
     )
 }
 
-export default Course
-    
-    
-const CourseStyled = styled.div`
+export default Proyects
+
+
+const ProyectStyled=styled.div`
     width: 100%;
-    min-height:50vh;
-    margin: 20px 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 10px; 
 `

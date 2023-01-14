@@ -1,4 +1,4 @@
-import Theme from "./Themes"
+import Theme from "../Themes"
 import styled from "styled-components"
 
 const NumberCardStyled=styled.div`

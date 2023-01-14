@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom"
-import {dataCourse as data} from "../data/dataCourse"
+//cambiar por BD
+import {dataCourse as data} from "../../data/dataCourse"
 import CourseDetail from "./CourseDetail"
 import {useState,useEffect} from "react"
 import styled from "styled-components"
@@ -19,6 +20,7 @@ const CourseDetailContainer = () => {
     useEffect(()=>{
        setDatos(data.find(item=>item.categoria==idCategory))
     },[])
+
     return(
         <CourseDetailStyled>
             <CourseDetail datos={datos}/>

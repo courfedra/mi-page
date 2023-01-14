@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 import styled from "styled-components"
-import Theme from "./Themes"
+import Theme from "../Themes"
 
 
 const CourseDetailItemStyled=styled.div`

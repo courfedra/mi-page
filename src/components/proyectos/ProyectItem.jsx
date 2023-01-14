@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Theme from "./Themes"
+import Theme from "../Themes"
 
 
 const ProyectItem=({datos})=>{

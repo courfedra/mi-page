@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import Theme from "./Themes"
+import Theme from "../Themes"
 import ProyectItem from "./ProyectItem"
-import Loading from "./Loading"
+import Loading from "../Loading"
 
 const ProyectCard = ({datos})=>{
     return(

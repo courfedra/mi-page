@@ -21,10 +21,10 @@ const NavBar = ()=>{
                     </Link>
                 </NavbarLogo>
                 <div className={`navbarLink ${clicked?'active':''}`}>
-                    <Link to="/">Inicio</Link>
-                    <Link to="/cursos">Cursos</Link>
-                    <Link to="/proyectos">Proyectos</Link>
-                    <Link to="/perfil">Perfil</Link>
+                    <Link to="/" onClick={mostrarMenu}>Inicio</Link>
+                    <Link to="/cursos" onClick={mostrarMenu}>Cursos</Link>
+                    <Link to="/proyectos" onClick={mostrarMenu}>Proyectos</Link>
+                    <Link to="/perfil" onClick={mostrarMenu}>Perfil</Link>
                 </div>
                 <HambMenuStyled onClick={mostrarMenu}>
                     <button className={`buttonBurger ${clicked}Active`}>
@@ -96,7 +96,7 @@ const NavbarLogo = styled.div`
     }
 `
 
-const HambMenuStyled = styled.button`
+const HambMenuStyled = styled.div`
     display: none;
     @media screen and (max-width:900px){
         background-color: transparent;

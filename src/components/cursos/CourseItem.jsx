@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import {Link} from "react-router-dom"
-import Theme from "../components/Themes"
+import Theme from "../Themes"
 
 const CourseItem=({datos})=>{
     return(

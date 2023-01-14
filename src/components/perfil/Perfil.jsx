@@ -1,8 +1,8 @@
-import CardPerfil from "../components/CardPerfil"
-import {dataPerfil as data} from "../data/dataPerfil"
+import CardPerfil from "./CardPerfil"
+import {dataPerfil as data} from "../../data/dataPerfil"
 import {useState} from "react"
 import styled from "styled-components"
-import Theme from "../components/Themes"
+import Theme from "../Themes"
 
 const PerfilStyled=styled.div`
     display: flex;
