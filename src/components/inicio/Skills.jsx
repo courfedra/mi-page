@@ -3,54 +3,31 @@ import Theme from "../Themes"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
 
-const hardSkill=["HTML","CSS","JS"]
-const softSkill=["bueno","malo"]
+const hardSkill=["HTML","CSS","JS","React","Firebase","Bootstrap","Sass"]
+const softSkill=["Imaginativo","Autodidacta","sencillo","minimalista","Sincero"]
 
 
 const Skills =()=>{
     return(
         <>
-            <HardSkillsStyled>
+            <SkillsStyled>
                 <SubTitulo texto="Hard Skills"/>
-                <BoxSkillStyled>
-                    {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem}/>)}
-                </BoxSkillStyled>
-            </HardSkillsStyled>
-            <SoftSkillsStyled>
+                {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem}/>)}
+            </SkillsStyled>
+            <SkillsStyled>
                 <SubTitulo texto="Soft Skills"/>
-                <BoxSkillStyled>
-                    {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem}/>)}
-                </BoxSkillStyled>
-            </SoftSkillsStyled>
+                {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem}/>)}
+            </SkillsStyled>
         </>
     )
 }
 
 export default Skills
 
-const HardSkillsStyled=styled.div`
+const SkillsStyled=styled.div`
     width: 100%;
     padding: 10px 0;
     display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: ${Theme.colorBgHover};
-`
-const SoftSkillsStyled=styled.div`
-    width: 100%;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: ${Theme.colorBgHover};
-`
-
-const BoxSkillStyled=styled.div`
-    width: 80%;
-    margin: 10px 0;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

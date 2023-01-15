@@ -1,28 +1,31 @@
 import styled from "styled-components"
 import Theme from "../Themes"
 
-const BoxSkill=({texto})=>{  
+const BoxSkill=({texto})=>{ 
     return(
         <SkillInfo>
-            <p>{texto}</p>
-            
+            <h6>{texto}</h6>
         </SkillInfo>
     )
 }
 export default BoxSkill
 
+
 const SkillInfo=styled.div`
-    width: 100%;
-    margin: 2.5px;
+    width: 20%;
+    padding: 5px;
+    margin: 5px 0;
     border-radius: 10px;
     color: ${Theme.colorEnlace};
     background-color: ${Theme.colorBg};
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    p{
-        padding:0 5px;
-        width: 100px;
+    text-align: center;
+    &:hover{
+        background-color: ${Theme.colorBgHover};
+        color: ${Theme.colorEnlaceHover};
+        box-shadow: 0 0 5px 5px ${Theme.colorLineaBorde};
     }
     
 `
