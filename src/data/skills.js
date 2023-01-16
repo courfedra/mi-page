@@ -1,0 +1,48 @@
+export const hardSkill=[
+    {
+        nombre:"HTML",
+        nivel:90
+    },
+    {
+        nombre:"CSS",
+        nivel:80
+    },
+    {   
+        nombre:"JS",
+        nivel:75
+    },
+    {
+        nombre:"React",
+        nivel:50
+    },
+    {
+        nombre:"Firebase",
+        nivel:40
+    },
+    {
+        nombre:"Bootstrap",
+        nivel:60
+    },
+    {
+        nombre:"Sass",
+        nivel:80
+    }
+]
+
+export const softSkill=[
+    {
+        nombre:"Autodidacta",
+    },
+    {
+        nombre:"Honesto",
+    },
+    {   
+        nombre:"Comprometido",
+    },
+    {
+        nombre:"Responsable",
+    },
+    {
+        nombre:"Comunicación",
+    }
+]
