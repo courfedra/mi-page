@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Theme from "../Themes"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
 import { hardSkill,softSkill } from "../../data/skills"

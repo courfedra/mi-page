@@ -4,17 +4,8 @@ import Theme from "../Themes"
 const BoxSkill=({texto,nivel})=>{ 
     return(
         <SkillInfo>
-            <p>
-                {texto}
-            </p>
-            <div className="barraPorcentaje" style={{
-                width: nivel + '%',
-                color:Theme.colorEnlace,
-                backgroundColor:Theme.colorLineaBorde,
-                borderRadius:15
-            }}>
-                {nivel?nivel+"%":""}
-            </div>
+            <p>{texto}</p>
+            {nivel&& <div className="barraPorcentaje" style={{width: nivel+"%"}}>{nivel+"%"}</div>}
         </SkillInfo>
     )
 }
@@ -23,31 +14,50 @@ export default BoxSkill
 
 const SkillInfo=styled.div`
     width: 50%;
+    height: 75px;
     padding: 5px;
-    margin: 10px 0;
+    margin: 10px;
     border-radius: 10px;
     color: ${Theme.colorEnlace};
     background-color: ${Theme.colorBg};
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
+    position: relative;
     p{
         letter-spacing: 1.5px;
+        margin: 5px 0;
+        position: absolute;
+        top: 0;
     }
-    &:hover{
+    .barraPorcentaje{
         background-color: ${Theme.colorBgHover};
-        color: ${Theme.colorEnlaceHover};
-        box-shadow: 0 0 5px 5px ${Theme.colorLineaBorde};
-    }
-    &:hover .barraPorcentaje{
-        animation: barraAnimada 2s ease-in-out infinite alternate !important;
+        color: ${Theme.colorEnlace};
+        height: 100%;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        animation: barraAnimada 2s ease-in-out infinite alternate;
     }
     @keyframes barraAnimada {
+        0%{
+            border: 1px solid ${Theme.colorEnlace};
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25%;
+
+        }
         100%{
-            background-color: ${Theme.colorEnlace};
-            color:${Theme.colorTxt}
+            border: 1px solid ${Theme.colorTitulo};
+            position: absolute;
+            bottom:0;
+            height: 25%;
         }
     }
 `
