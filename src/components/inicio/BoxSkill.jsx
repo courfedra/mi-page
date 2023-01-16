@@ -42,19 +42,19 @@ const SkillInfo=styled.div`
         align-items: center;
         text-align: center;
         border-radius: 10px;
-        animation: barraAnimada 2s ease-in-out infinite alternate;
+        animation: barraAnimada 3s ease-in-out 1s infinite alternate;
     }
     @keyframes barraAnimada {
-        0%{
-            border: 1px solid ${Theme.colorEnlace};
+        100%{
+            border: 2px solid ${Theme.colorTitulo};
             position: absolute;
             bottom: 0;
-            width: 100%;
+            width: 99%;
             height: 25%;
 
         }
-        100%{
-            border: 1px solid ${Theme.colorTitulo};
+        0%{
+            border: 1px solid ${Theme.colorEnlace};
             position: absolute;
             bottom:0;
             height: 25%;

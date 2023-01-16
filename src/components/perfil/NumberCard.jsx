@@ -1,30 +1,6 @@
 import Theme from "../Themes"
 import styled from "styled-components"
 
-const NumberCardStyled=styled.div`
-    width: 50%;
-    height: 5vh;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-`
-
-const PosicionActiveStyled=styled.div`
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    p{color: ${Theme.colorBg}}
-`
-
-const PosicionNoActiveStyled=styled.div`
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    p{color: ${Theme.colorEnlace}}
-`
-
 const NumberCard = ({posicion,array}) => {
     return(
         <NumberCardStyled>
@@ -48,3 +24,27 @@ const NumberCard = ({posicion,array}) => {
     )
 }
 export default NumberCard
+
+const NumberCardStyled=styled.div`
+    width: 50%;
+    height: 5vh;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+`
+
+const PosicionActiveStyled=styled.div`
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    p{color: ${Theme.colorEnlace}}
+`
+
+const PosicionNoActiveStyled=styled.div`
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    p{color: ${Theme.colorBg}}
+`

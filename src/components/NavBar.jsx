@@ -17,7 +17,7 @@ const NavBar = ()=>{
             <Navbar>
                 <NavbarLogo>
                     <Link to="/">
-                        <img src={logoPage} alt="Logo Franandres"/>
+                        <img id="inicio" src={logoPage} alt="Logo Franandres"/>
                     </Link>
                 </NavbarLogo>
                 <div className={`navbarLink ${clicked?'active':''}`}>

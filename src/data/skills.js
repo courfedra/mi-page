@@ -1,31 +1,31 @@
 export const hardSkill=[
     {
         nombre:"HTML",
-        nivel:90
+        nivel:91
     },
     {
         nombre:"CSS",
-        nivel:80
+        nivel:87
     },
     {   
-        nombre:"JS",
-        nivel:75
+        nombre:"Javascript",
+        nivel:81
     },
     {
         nombre:"React",
-        nivel:50
+        nivel:65
     },
     {
         nombre:"Firebase",
-        nivel:40
+        nivel:33
     },
     {
         nombre:"Bootstrap",
-        nivel:60
+        nivel:62
     },
     {
         nombre:"Sass",
-        nivel:80
+        nivel:79
     }
 ]
 

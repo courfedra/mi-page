@@ -1,6 +1,15 @@
 import styled from "styled-components"
 import Theme from "./Themes"
 
+const SubTitulo = ({texto, id})=>{
+    return(
+        <H2SubTitulo>
+            <h2 id={id}>{texto}<span className="continueWriting">_</span></h2>
+        </H2SubTitulo>
+    )
+}
+export default SubTitulo
+
 const H2SubTitulo=styled.div`
     width: 100%;
     min-height: 15vh;
@@ -9,19 +18,15 @@ const H2SubTitulo=styled.div`
     justify-content: center;
     align-items: center;
     letter-spacing: 5px;
-    /*background-image: url("https://i.ibb.co/XFJHff7/react-Back-Ground.jpg");
-    background-size: cover;
-    background-attachment:fixed;
-    background-position: center;*/
     color: ${Theme.colorTitulo};
     background-color: ${Theme.colorBg};
+    .continueWriting{
+            animation: animate .4s infinite alternate;
+            @keyframes animate {
+                from{
+                    color: transparent;
+                };
+            }
+        }
     
 `
-const SubTitulo = ({texto})=>{
-    return(
-        <H2SubTitulo>
-            <h2>{texto}</h2>
-        </H2SubTitulo>
-    )
-}
-export default SubTitulo

@@ -7,11 +7,11 @@ const Skills =()=>{
     return(
         <>
             <SkillsStyled>
-                <SubTitulo texto="Hard Skills"/>
+                <SubTitulo id="hardskill" texto="Hard Skills"/>
                 {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem.nombre} nivel={elem.nivel}/>)}
             </SkillsStyled>
             <SkillsStyled>
-                <SubTitulo texto="Soft Skills"/>
+                <SubTitulo id="softskill" texto="Soft Skills"/>
                 {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem.nombre}/>)}
             </SkillsStyled>
         </>
@@ -26,4 +26,8 @@ const SkillsStyled=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("https://i.ibb.co/rktR4Zt/vecteezy-watercolour-nature-design-with-hand-painted-leaves-9201325.jpg");
+    background-size: cover;
+    background-position: center;
+    
 `

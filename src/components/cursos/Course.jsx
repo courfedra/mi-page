@@ -39,10 +39,12 @@ export default Course
 const CourseStyled = styled.div`
     width: 100%;
     min-height:50vh;
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px; 
+    background-image: url("https://i.ibb.co/9NN5HgX/vecteezy-soothing-fresh-green-pastel-color-background-with-abstract-9263861.jpg");
+    background-size: cover;
+    background-position: center;
 `

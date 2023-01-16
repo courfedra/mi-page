@@ -1,14 +1,20 @@
 import styled from "styled-components"
 import Inicio from './Inicio'
 import Skills from "./Skills"
+import Contacto from "./Contacto"
+import MenuIdBody from "./MenuIdBody"
 
 const Body = ()=>{
 
     return(
-        <BodyStyled>
-            <Inicio/>
-            <Skills/>
-        </BodyStyled>
+        <>
+            <BodyStyled>
+                <MenuIdBody/>
+                <Inicio/>
+                <Skills/>
+                <Contacto/>
+            </BodyStyled>
+        </>
     )
 }
 

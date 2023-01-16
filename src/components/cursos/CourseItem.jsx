@@ -29,6 +29,7 @@ const CourseItemStyled = styled.div`
     align-items: center;
     text-align: center;
     transition: all .1s ease-in-out;
+    background-color: #ffffffcc;
     border: 2px dotted ${Theme.colorLineaBorde};
     h2{color:${Theme.colorTitulo}}
     p{color: ${Theme.colorTxt}}

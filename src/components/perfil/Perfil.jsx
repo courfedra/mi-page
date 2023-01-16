@@ -4,30 +4,6 @@ import {useState} from "react"
 import styled from "styled-components"
 import Theme from "../Themes"
 
-const PerfilStyled=styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-`
-
-const BotonCardPerfilStyled=styled.button`
-    padding: 10px;
-    margin: 5px;
-    background-color: ${Theme.colorBg};
-    color: ${Theme.colorEnlace};
-    border: none;
-    border-radius: 15px;
-    letter-spacing: 1.5px;
-    transition: all .25s ease-in-out;
-    &:hover{
-        color: ${Theme.colorEnlaceHover};
-        background-color: ${Theme.colorBgHover};
-    }
-`
-
 const Perfil = ()=>{
     const [page,setPage] = useState(0)
 
@@ -46,3 +22,30 @@ const Perfil = ()=>{
     )
 }
 export default Perfil
+
+const PerfilStyled=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://i.ibb.co/qynQyct/vecteezy-beautiful-forest-panoramic-realistic-wanderlust-vector-9302810.jpg");
+    background-position: center;
+    background-size: cover;
+`
+
+const BotonCardPerfilStyled=styled.button`
+    padding: 10px;
+    margin: 5px;
+    background-color: ${Theme.colorBg};
+    color: ${Theme.colorEnlace};
+    border: none;
+    border-radius: 15px;
+    letter-spacing: 1.5px;
+    transition: all .25s ease-in-out;
+    &:hover{
+        color: ${Theme.colorEnlaceHover};
+        background-color: ${Theme.colorBgHover};
+    }
+`
