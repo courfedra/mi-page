@@ -25,22 +25,27 @@ const MenuId=styled.div`
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 10;
     ul{
-        width: 80%;
-        margin: 5px 0;
+        width: 100%;
+        padding: 5px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         text-align: center;
         list-style: none;
         li{
-            margin: 5px;
-            padding: 2.5px;
+            margin: 2.5px;
+            padding: 0;
             a{
                 text-decoration: none;
                 color:${Theme.colorEnlace}
             }
+        }
+    }
+    @media screen and (max-width:900px) {
+        ul{
+            justify-content: space-between;
         }
     }
 `

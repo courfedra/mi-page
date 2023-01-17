@@ -35,28 +35,27 @@ const SkillInfo=styled.div`
     .barraPorcentaje{
         background-color: ${Theme.colorBgHover};
         color: ${Theme.colorEnlace};
-        height: 100%;
+        height: 25%;
         margin: 5px;
+        border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        border-radius: 10px;
-        animation: barraAnimada 3s ease-in-out 1s infinite alternate;
+        border: 1px solid ${Theme.colorLineaBorde};
+        position: absolute;
+        bottom:0;
+        
     }
+    &:hover .barraPorcentaje{
+            animation: barraAnimada 3s ease-in-out infinite alternate;
+        }
     @keyframes barraAnimada {
         100%{
             border: 2px solid ${Theme.colorTitulo};
             position: absolute;
             bottom: 0;
             width: 99%;
-            height: 25%;
-
-        }
-        0%{
-            border: 1px solid ${Theme.colorEnlace};
-            position: absolute;
-            bottom:0;
             height: 25%;
         }
     }
