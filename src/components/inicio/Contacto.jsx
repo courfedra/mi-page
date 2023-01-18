@@ -6,7 +6,12 @@ const Contacto = () => {
     return(
         <>
             <SubTitulo id="contacto" texto="Contacto"/>
-            <p>Hola</p>
+            <form>
+                <fieldset style={{padding:"50px"}}>
+                    <input type="text"></input>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
         </>
     )
 }

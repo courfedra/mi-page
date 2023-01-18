@@ -6,7 +6,7 @@ const Inicio =()=>{
 return(
     <CardInfo>
         <CardPresentation>
-            <h1>Hola, soy<span>Francisco Andres</span></h1>
+            <h1>Hola soy<span>Francisco Andres</span></h1>
             <h2><i>Frontend Developer</i><span className="continueWriting">_</span></h2>
             <BtnInfo>Descargar CV</BtnInfo>
         </CardPresentation>
@@ -20,7 +20,7 @@ const CardInfo = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: relative;
     background-image: url("https://i.ibb.co/bbJbMBW/wallpaperflare-com-wallpaper.jpg");
@@ -65,17 +65,6 @@ const CardPresentation=styled.div`
             }
         }
     }
-    animation: 5s ease-in-out .5s infinite alternate moveTop;
-            @keyframes moveTop {
-                0%{
-                    position: absolute;
-                    top: 0%;
-                };
-                100%{
-                    position: absolute;
-                    top: 20%;
-                }
-            }
     
 `
 
