@@ -73,18 +73,24 @@ const Navbar = styled.nav`
             padding: 0;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            top: 100px;
+            top: 0;
             width: 100%;
+            height: 100vh;
             left: -1500px;
-            right: 0;
             background-color: ${Theme.colorBg}ee;
         }
     }
     .navbarLink.active{
         @media screen and (max-width:900px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             left: 0;
+            top: 0;
             z-index: 100;
             height: 100vh;
         }
@@ -112,6 +118,7 @@ const HambMenuStyled = styled.div`
         .buttonBurger{
             border:none;
             background-color: transparent;
+            z-index: 200;
             .burgerLine{
                 background-color: ${Theme.colorEnlace};
                 width: 25px;
@@ -123,7 +130,6 @@ const HambMenuStyled = styled.div`
         }
         
         .trueActive{
-            //cruz
             .burgerLine:nth-child(1){
                 transform:rotate(45deg) translate(5px,5px);
             }
