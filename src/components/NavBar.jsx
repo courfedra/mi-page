@@ -48,8 +48,10 @@ const Navbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ${Theme.colorBg};
-    border-bottom: 2px solid ${Theme.colorLineaBorde};
+    position: fixed;
+    top: 0;
+    background-color:transparent;
+    backdrop-filter: blur(5px);
     .navbarLink{
         transition: all .5s ease-in-out;
         margin: 5px;
@@ -85,7 +87,7 @@ const Navbar = styled.nav`
             left: 0;
             z-index: 100;
         }
-    }    
+    } 
 `
     
 const NavbarLogo = styled.div`

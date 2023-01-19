@@ -6,12 +6,9 @@ import { hardSkill,softSkill } from "../../data/skills"
 const Skills =()=>{
     return(
         <>
-            <SubTitulo id="hardskill" texto="Hard Skills"/>
+            <SubTitulo texto="Skills"/>
             <SkillsStyled>
-                {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem.nombre} nivel={elem.nivel}/>)}
-            </SkillsStyled>
-            <SubTitulo id="softskill" texto="Soft Skills"/>
-            <SkillsStyled>
+                {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem.nombre}/>)}
                 {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem.nombre}/>)}
             </SkillsStyled>
         </>
@@ -28,8 +25,4 @@ const SkillsStyled=styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-image: url("https://i.ibb.co/rktR4Zt/vecteezy-watercolour-nature-design-with-hand-painted-leaves-9201325.jpg");
-    background-size: cover;
-    background-position: center;
-    
 `

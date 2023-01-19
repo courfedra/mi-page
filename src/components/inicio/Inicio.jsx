@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Theme from "../Themes"
 
+
 const Inicio =()=>{
 
 return(
@@ -8,8 +9,13 @@ return(
         <CardPresentation>
             <h1>Hola soy<span>Francisco Andres</span></h1>
             <h2><i>Frontend Developer</i><span className="continueWriting">_</span></h2>
-            <BtnInfo>Descargar CV</BtnInfo>
         </CardPresentation>
+        <CardLinks>
+            <BtnInfo><a>Descargar CV</a></BtnInfo>
+            <BtnInfo><a target="_blank" href="https://github.com/courfedra">GitHub</a></BtnInfo>
+            <BtnInfo><a target="_blank" href="https://www.linkedin.com/in/franandres/">LinkedIn</a></BtnInfo>
+            <BtnInfo><a href="#contacto">Contacto</a></BtnInfo>
+        </CardLinks>
     </CardInfo>
     )
 }
@@ -22,23 +28,16 @@ const CardInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    background-image: url("https://i.ibb.co/bbJbMBW/wallpaperflare-com-wallpaper.jpg");
-    background-size: auto;
-    background-attachment: fixed;
-    background-position: center;
-    
+    background-color:  ${Theme.colorBg};
 `
 
 const CardPresentation=styled.div`
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 0;
     justify-content: center;
     text-align: center;
     h1{
-        color: ${Theme.LineaBorde};
+        color: ${Theme.colorTxtBg};
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -52,7 +51,7 @@ const CardPresentation=styled.div`
     }
     h2{
         letter-spacing: 1.2px;
-        color: ${Theme.colorTxt};
+        color: ${Theme.colorTxtBg};
         .continueWriting{
             animation: animate .4s infinite alternate;
             @keyframes animate {
@@ -60,25 +59,41 @@ const CardPresentation=styled.div`
                     color: transparent;
                 };
                 to{
-                    color: ${Theme.colorTxt};
+                    color: ${Theme.colorTxtBg};
                 }
             }
         }
     }
     
 `
+const CardLinks=styled.div`
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:900px) {
+        display: flex;
+        flex-direction: column;   
+    }
+`
 
 const BtnInfo = styled.button`
+    width: 200px;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
     letter-spacing: 2px;
-    color: ${Theme.colorEnlace};
     background-color: ${Theme.colorBg};
     border: 1px solid ${Theme.colorLineaBorde};
-    transition: all .2s ease-in-out;
+    a{
+        color: ${Theme.colorEnlace};
+        text-decoration: none;
+    }
     &:hover{
-        color: ${Theme.colorEnlaceHover};
         background-color: ${Theme.colorBgHover};
+        a{
+            color: ${Theme.colorEnlaceHover};
+        }
     }
 `
