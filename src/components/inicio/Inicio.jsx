@@ -73,13 +73,14 @@ const CardLinks=styled.div`
     justify-content: center;
     align-items: center;
     @media screen and (max-width:900px) {
-        display: flex;
-        flex-direction: column;   
+        width: 100%;
+        display: flex; 
+        flex-wrap: wrap; 
     }
 `
 
 const BtnInfo = styled.button`
-    width: 200px;
+    min-width: 200px;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
