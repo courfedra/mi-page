@@ -78,7 +78,7 @@ const Navbar = styled.nav`
             width: 100%;
             left: -1500px;
             right: 0;
-            background-color: ${Theme.colorBg};
+            background-color: ${Theme.colorBg}ee;
         }
     }
     .navbarLink.active{
@@ -86,6 +86,7 @@ const Navbar = styled.nav`
             position: absolute;
             left: 0;
             z-index: 100;
+            height: 100vh;
         }
     } 
 `
