@@ -27,6 +27,7 @@ const SubTituloStyled=styled.div`
             };
         }
     }
+    text-align: center;
     h2{
         color: ${Theme.colorTitulo};
         letter-spacing: 5px;
