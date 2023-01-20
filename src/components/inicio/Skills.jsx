@@ -2,11 +2,17 @@ import styled from "styled-components"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
 import { hardSkill,softSkill } from "../../data/skills"
+import Theme from "../Themes"
 
 const Skills =()=>{
     return(
         <>
-            <SubTitulo texto="Skills"/>
+            <SubTitulo 
+                id="skills"
+                color={Theme.colorBg}
+                titulo="Skills"
+                texto="Dejo a tu disposición las tecnologías que he aprendido hasta el momento"
+            />
             <SkillsStyled>
                 {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem.nombre}/>)}
                 {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem.nombre}/>)}
@@ -25,4 +31,5 @@ const SkillsStyled=styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: ${Theme.colorBg};
 `

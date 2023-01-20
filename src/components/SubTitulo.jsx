@@ -1,32 +1,38 @@
 import styled from "styled-components"
 import Theme from "./Themes"
 
-const SubTitulo = ({texto, id})=>{
+const SubTitulo = ({id,titulo,texto,color})=>{
     return(
-        <H2SubTitulo>
-            <h2 id={id}>{texto}<span className="continueWriting">_</span></h2>
-        </H2SubTitulo>
+        <SubTituloStyled style={{background:`${color}`}}>
+            <h2 id={id}>{titulo}<span className="continueWriting">_</span></h2>
+            <p>{texto}</p>
+        </SubTituloStyled>
     )
 }
 export default SubTitulo
 
-const H2SubTitulo=styled.div`
+const SubTituloStyled=styled.div`
     width: 100%;
     min-height: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    letter-spacing: 5px;
-    color: ${Theme.colorTitulo};
-    background-color: ${Theme.colorBg};
+    background-color: ${Theme.colorBgHover};
     .continueWriting{
-            animation: animate .4s infinite alternate;
-            @keyframes animate {
-                from{
-                    color: transparent;
-                };
-            }
+        animation: animate .4s infinite alternate;
+        @keyframes animate {
+            from{
+                color: transparent;
+            };
         }
+    }
+    h2{
+        color: ${Theme.colorTitulo};
+        letter-spacing: 5px;
+    }
+    p{
+        color:${Theme.colorTxtBg}
+    }
     
 `
