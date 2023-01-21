@@ -1,20 +1,39 @@
 import styled from "styled-components"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
-import { hardSkill,softSkill } from "../../data/skills"
+import { hardSkill,softSkill,librarySkills } from "../../data/skills"
 import Theme from "../Themes"
 
 const Skills =()=>{
     return(
         <>
             <SubTitulo 
-                id="skills"
-                color={Theme.colorBg}
-                titulo="Skills"
-                texto="Dejo a tu disposición las tecnologías que he aprendido hasta el momento"
+                id="skillsCore"
+                color={Theme.colorEnlace}
+                titulo="Habilidades Centrales"
+                texto="Dejo a tu disposición las tecnologías centrales que he aprendido hasta el momento"
             />
             <SkillsStyled>
                 {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem.nombre}/>)}
+            </SkillsStyled>
+
+            <SubTitulo 
+                id="skillsPasive"
+                color={Theme.colorEnlace}
+                titulo="Otras Habilidades"
+                texto="Otras habilidades que he incorporado para mejorar la experiencia al momento de desarrollar"
+            />
+            <SkillsStyled >
+                {librarySkills.map(elem=><BoxSkill key={librarySkills.indexOf(elem)} texto={elem.nombre}/>)}
+            </SkillsStyled>
+
+            <SubTitulo 
+                id="softSkills"
+                color={Theme.colorEnlace}
+                titulo="Habilidades Personales"
+                texto="Habilidades que la experiencia en diferentes situaciones y/o trabajos me enseñaron"
+            />
+            <SkillsStyled >
                 {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem.nombre}/>)}
             </SkillsStyled>
         </>
@@ -25,7 +44,7 @@ export default Skills
 
 const SkillsStyled=styled.div`
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 10px;
     display:flex;
     flex-wrap: wrap;

@@ -17,7 +17,7 @@ const SkillInfo=styled.div`
     margin: 5px;
     border-radius: 10px;
     color: ${Theme.colorEnlace};
-    background-color: ${Theme.colorBg};
+    background-color: ${Theme.colorBgHover};
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,7 +3,7 @@ import Theme from "./Themes"
 
 const SubTitulo = ({id,titulo,texto,color})=>{
     return(
-        <SubTituloStyled style={{background:`${color}`}}>
+        <SubTituloStyled style={{borderTop:` 1px solid ${color}`}}>
             <h2 id={id}>{titulo}<span className="continueWriting">_</span></h2>
             <p>{texto}</p>
         </SubTituloStyled>
@@ -18,7 +18,7 @@ const SubTituloStyled=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${Theme.colorBgHover};
+    background-color: ${Theme.colorBg};
     .continueWriting{
         animation: animate .4s infinite alternate;
         @keyframes animate {
@@ -33,7 +33,7 @@ const SubTituloStyled=styled.div`
         letter-spacing: 5px;
     }
     p{
-        color:${Theme.colorTxtBg}
+        color:${Theme.colorTxt}
     }
     
 `

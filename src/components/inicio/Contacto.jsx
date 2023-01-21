@@ -7,9 +7,9 @@ const Contacto = () => {
         <>
             <SubTitulo 
                 id="contacto" 
-                color={Theme.colorBgHover} 
+                color={Theme.colorEnlace} 
                 titulo="Contacto" 
-                texto="¡Envíame un mensaje o escríbeme en mis redes sociales!"/>
+                texto="¡Envíame un mensaje y lo leeré con todo gusto!"/>
             <ContactoContainer>
                 <FormStyled>
                     <FieldsetStyled>
@@ -41,7 +41,7 @@ const ContactoContainer=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${Theme.colorBgHover};
+    background-color: ${Theme.colorBg};
 `
 
 const FormStyled=styled.form`
@@ -100,6 +100,8 @@ const LabelInput=styled.div`
     color:${Theme.colorTxtBg};
     input{
         width: 100%;
+        border-radius: 10px;
+        padding: 2.5px;
     }
     label{
         margin: 5px 0;
@@ -107,5 +109,8 @@ const LabelInput=styled.div`
     textarea{
         resize:none;
         width:100%;
-        height:25vh;}
+        height:25vh;
+        border-radius: 10px;
+        padding: 5px;
+    }
 `

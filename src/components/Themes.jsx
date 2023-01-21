@@ -1,13 +1,13 @@
 
 const Theme={
-    colorBg:"#1e3a2a",
-    colorBgHover:"#2d2b3b",
-    colorTxt:"#101010",
-    colorTxtBg:"#f5f5f5",
-    colorTitulo:"#3dc37d",
-    colorEnlace:"#e9c893",
-    colorEnlaceHover:"#b39970",
-    colorLineaBorde:"#838081"
+    colorBg:"#101010",//core
+    colorBgHover:"#202020",
+    colorTxt:"#e1e1e5",
+    colorTxtBg:"#4abcad",
+    colorTitulo:"#f9bb30",//core
+    colorEnlace:"#ff491b",//core
+    colorEnlaceHover:"#ff7d5d",
+    colorLineaBorde:"#4abcad"//core
 };
 
 export default Theme
