@@ -15,15 +15,15 @@ const Contacto = () => {
                     <FieldsetStyled>
                         <LabelInput>
                             <label for="inputTitulo">Título del mensaje</label>
-                            <input type="text" id="inputTitulo" placeholder="Titulo de mensaje"></input>
+                            <input type="text" name="inputTitulo" id="inputTitulo" placeholder="Titulo de mensaje"></input>
                         </LabelInput>
                         <LabelInput>
                             <label for="inputCorreo">Correo Electrónico</label>
-                            <input type="email" id="inputCorreo" placeholder="Correo Electrónico"></input>
+                            <input type="email" name="inputCorreo" id="inputCorreo" placeholder="Correo Electrónico"></input>
                         </LabelInput>
                         <LabelInput>
                             <label for="inputTextarea">Escribe tu mensaje</label>
-                            <textarea id="inputTextarea" placeholder="Mensaje..."></textarea>
+                            <textarea id="inputTextarea" name="inputTextarea" placeholder="Mensaje..."></textarea>
                         </LabelInput>
                     </FieldsetStyled>
                     <button type="submit">Enviar</button>     
@@ -36,7 +36,7 @@ export default Contacto
 
 const ContactoContainer=styled.div`
     width: 100%;
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,20 +53,31 @@ const FormStyled=styled.form`
     justify-content: space-around;
     align-items:center ;
     button{
-        width:20%;
+        width:200px;
+        height: 200px;
         border: none;
+        border-radius: 100px;
         padding: 5px;
         background-color: ${Theme.colorBg};
         color:${Theme.colorEnlace};
+        font-size:1.5em;
         border: 2px solid ${Theme.colorLineaBorde};
+        transition: all .25s ease-in-out;
         &:hover{
             background-color: ${Theme.colorBgHover};
             color:${Theme.colorEnlaceHover};
+            border-radius: 0px;
         }
     }
     @media screen and (max-width:900px) {
         flex-direction: column;
         padding: 2.5px;
+        button{
+            width: 20%;
+            height: 20%;
+            margin: 5px;
+            border-radius: 15px;
+        }
     }
 `
 
