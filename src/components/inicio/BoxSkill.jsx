@@ -12,12 +12,14 @@ export default BoxSkill
 
 
 const SkillInfo=styled.div`
-    width: 150px;
-    height: 50px;
+    width: 175px;
+    height: 75px;
     margin: 5px;
+    padding: 10px;
     border-radius: 10px;
-    color: ${Theme.colorEnlace};
-    background-color: ${Theme.colorBgHover};
+    color: ${Theme.colorTxt};
+    background-color: ${Theme.colorBg};
+    border: 1px solid ${Theme.colorLineaBorde};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,5 +27,10 @@ const SkillInfo=styled.div`
     p{
         letter-spacing: 1.5px;
         margin: 5px 0;
+    }
+    transition: all .25s ease-in-out;
+    &:hover{
+        color:${Theme.colorTitulo};
+        background-color: ${Theme.colorBgHover};
     }
 `

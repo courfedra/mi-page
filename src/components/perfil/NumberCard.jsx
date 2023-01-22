@@ -46,5 +46,5 @@ const PosicionNoActiveStyled=styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    p{color: ${Theme.colorBg}}
+    p{color: ${Theme.colorBgHover}}
 `

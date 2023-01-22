@@ -7,7 +7,7 @@ const Contacto = () => {
         <>
             <SubTitulo 
                 id="contacto" 
-                color={Theme.colorEnlace} 
+                color={Theme.colorLineaBorde} 
                 titulo="Contacto" 
                 texto="¡Envíame un mensaje y lo leeré con todo gusto!"/>
             <ContactoContainer>
@@ -73,7 +73,7 @@ const FormStyled=styled.form`
         flex-direction: column;
         padding: 2.5px;
         button{
-            width: 20%;
+            width: auto;
             height: 20%;
             margin: 5px;
             border-radius: 15px;
@@ -97,7 +97,7 @@ const LabelInput=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color:${Theme.colorTxtBg};
+    color:${Theme.colorTxt};
     input{
         width: 100%;
         border-radius: 10px;

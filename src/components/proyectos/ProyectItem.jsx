@@ -30,7 +30,8 @@ const ProyectItemStyled=styled.div`
     width: 100%;
     justify-content: center;
     border-radius: 5px;
-    box-shadow:0 0 25px 5px ${Theme.colorLineaBorde};
+    border: 2px solid ${Theme.colorLineaBorde};
+    background-color: ${Theme.colorBg};
     @media screen and (max-width:900px){
         flex-wrap: wrap;
     }
@@ -68,7 +69,7 @@ const ProyectCardInfoStyled=styled.div`
             color: ${Theme.colorEnlace};
             background-color: ${Theme.colorBg};
             text-decoration: none;
-            outline: 1px solid ${Theme.colorLineaBorde};
+            border: 1px solid ${Theme.colorLineaBorde};
             &:hover{
                 color: ${Theme.colorEnlaceHover};
                 background-color: ${Theme.colorBgHover};
@@ -80,7 +81,7 @@ const ProyectCardInfoStyled=styled.div`
 
 const NameAndTecnology=styled.div`
     h3{
-        color: ${Theme.colorTxt};
+        color: ${Theme.colorTitulo};
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -88,7 +89,7 @@ const NameAndTecnology=styled.div`
         margin: 2.5px;
     }
     span{
-        color: ${Theme.colorTitulo};
+        color: ${Theme.colorTxt};
         padding: 2.5px;
     }
         

@@ -26,10 +26,13 @@ export default CardPerfil
 const CardPerfilStyled=styled.div`
     width: 100%;
     margin: 5px;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    @media screen and (max-width:900px) {
+        margin-top:15%;
+    }
 `
 const CardStyled=styled.div`
         display: flex;
@@ -37,11 +40,11 @@ const CardStyled=styled.div`
         align-items: center;
         flex-direction:row;
         width: 75%;
-        min-height: 70vh;
+        min-height: 50vh;
         padding: 5px;
         text-align: center;
-        background-color: #ffffffcc;
-        border: 2px groove ${Theme.colorLineaBorde};
+        background-color: ${Theme.colorBg};
+        border: 2px solid ${Theme.colorLineaBorde};
         transition: all .25s ease-in-out;
     @media screen and (max-width:900px) {
         display: flex;
@@ -54,7 +57,7 @@ const ImgCard=styled.img`
     height: 100px;
     margin: 5px;
     border-radius: 100%;
-    outline: 2.5px solid ${Theme.colorLineaBorde};
+    border: 2.5px solid ${Theme.colorLineaBorde};
     transition: all .25s ease-in-out;
 `
 
@@ -66,5 +69,6 @@ const CardInfoStyled=styled.div`
     flex-direction: column;
     justify-content: center;
     text-align:center;
+    color:${Theme.colorTxt};
     span{color: ${Theme.colorTitulo};}
 `

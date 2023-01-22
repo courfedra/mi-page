@@ -16,11 +16,15 @@ export default ProyectCard
 
 const ProyectCardStyled=styled.div`
         margin: 5px;
+        margin-top: 10%;
         padding: 5px;
         width: 80%;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width:900px) {
+            margin-top: 20%;   
+        }
         
 `

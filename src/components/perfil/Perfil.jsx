@@ -30,9 +30,7 @@ const PerfilStyled=styled.div`
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background-image: url("https://i.ibb.co/qynQyct/vecteezy-beautiful-forest-panoramic-realistic-wanderlust-vector-9302810.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: ${Theme.colorBg};
 `
 
 const BotonCardPerfilStyled=styled.button`
@@ -41,6 +39,7 @@ const BotonCardPerfilStyled=styled.button`
     background-color: ${Theme.colorBg};
     color: ${Theme.colorEnlace};
     border: none;
+    border: 1px solid ${Theme.colorLineaBorde};
     border-radius: 15px;
     letter-spacing: 1.5px;
     transition: all .25s ease-in-out;

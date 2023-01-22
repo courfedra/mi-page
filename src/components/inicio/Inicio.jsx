@@ -37,7 +37,7 @@ const CardPresentation=styled.div`
     justify-content: center;
     text-align: center;
     h1{
-        color: ${Theme.colorTxtBg};
+        color: ${Theme.colorTxt};
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -51,7 +51,7 @@ const CardPresentation=styled.div`
     }
     h2{
         letter-spacing: 1.2px;
-        color: ${Theme.colorTxtBg};
+        color: ${Theme.colorTxt};
         .continueWriting{
             animation: animate .4s infinite alternate;
             @keyframes animate {
@@ -59,7 +59,7 @@ const CardPresentation=styled.div`
                     color: transparent;
                 };
                 to{
-                    color: ${Theme.colorTxtBg};
+                    color: ${Theme.colorTxt};
                 }
             }
         }

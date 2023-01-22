@@ -29,35 +29,35 @@ const CourseItemStyled = styled.div`
     align-items: center;
     text-align: center;
     transition: all .1s ease-in-out;
-    background-color: #ffffffcc;
-    border: 2px dotted ${Theme.colorLineaBorde};
+    background-color: ${Theme.colorBg};
+    border: 2px solid ${Theme.colorLineaBorde};
     h2{color:${Theme.colorTitulo}}
     p{color: ${Theme.colorTxt}}
       
 `
 const LinksDetailStyled=styled.div`
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 `
 
 const ACardDetailStyled=styled.a`
-        text-decoration: none;
-        width: 200px;
-        padding: 5px;
-        margin: 5px;
-        border: 1px solid ${Theme.colorLineaBorde};
-        border-radius: 5px;
-        color: ${Theme.colorEnlace};
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        transition: all .25s ease-in-out;
-        &:hover{
-            background-color: ${Theme.colorBg};
-        }
+    text-decoration: none;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid ${Theme.colorLineaBorde};
+    border-radius: 5px;
+    color: ${Theme.colorEnlace};
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all .25s ease-in-out;
+    &:hover{
+        background-color: ${Theme.colorBgHover};
+        color:${Theme.colorEnlaceHover}
+    }
 `
 const BotonCardDetailStyled=styled.button`
         text-decoration: none;
@@ -72,6 +72,7 @@ const BotonCardDetailStyled=styled.button`
         text-transform: uppercase;
         transition: all .25s ease-in-out;
         &:hover{
-            background-color: ${Theme.colorBg};
+            background-color: ${Theme.colorBgHover};
+            color:${Theme.colorEnlaceHover}
         } 
 `

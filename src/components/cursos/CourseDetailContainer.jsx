@@ -5,12 +5,6 @@ import CourseDetail from "./CourseDetail"
 import {useState,useEffect} from "react"
 import styled from "styled-components"
 
-const CourseDetailStyled=styled.div`
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-`
 
 const CourseDetailContainer = () => {
     
@@ -28,3 +22,10 @@ const CourseDetailContainer = () => {
     )
 }
 export default CourseDetailContainer
+
+const CourseDetailStyled=styled.div`
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+`

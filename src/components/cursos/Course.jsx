@@ -1,4 +1,5 @@
 import CourseCard from './CourseCard'
+import Theme from '../Themes'
 import styled from "styled-components"
 import { useState,useEffect } from "react"
 import {db} from "../../data/firebaseConfig"
@@ -44,7 +45,5 @@ const CourseStyled = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px; 
-    background-image: url("https://i.ibb.co/9NN5HgX/vecteezy-soothing-fresh-green-pastel-color-background-with-abstract-9263861.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color:${Theme.colorBg}
 `

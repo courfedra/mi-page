@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
 import { hardSkill,softSkill,librarySkills } from "../../data/skills"
@@ -9,7 +10,7 @@ const Skills =()=>{
         <>
             <SubTitulo 
                 id="skillsCore"
-                color={Theme.colorEnlace}
+                color={Theme.colorLineaBorde}
                 titulo="Habilidades Centrales"
                 texto="Dejo a tu disposición las tecnologías centrales que he aprendido hasta el momento"
             />
@@ -19,7 +20,7 @@ const Skills =()=>{
 
             <SubTitulo 
                 id="skillsPasive"
-                color={Theme.colorEnlace}
+                color={Theme.colorLineaBorde}
                 titulo="Otras Habilidades"
                 texto="Otras habilidades que he incorporado para mejorar la experiencia al momento de desarrollar"
             />
@@ -29,12 +30,14 @@ const Skills =()=>{
 
             <SubTitulo 
                 id="softSkills"
-                color={Theme.colorEnlace}
+                color={Theme.colorLineaBorde}
                 titulo="Habilidades Personales"
                 texto="Habilidades que la experiencia en diferentes situaciones y/o trabajos me enseñaron"
             />
             <SkillsStyled >
-                {softSkill.map(elem=><BoxSkill key={softSkill.indexOf(elem)} texto={elem.nombre}/>)}
+                <Link to="/perfil">
+                    <BoxSkill texto="¡Visita mi perfil!"/>
+                </Link>
             </SkillsStyled>
         </>
     )
@@ -51,4 +54,5 @@ const SkillsStyled=styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${Theme.colorBg};
+    a{text-decoration:none}
 `

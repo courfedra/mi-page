@@ -21,6 +21,7 @@ const SubTituloStyled=styled.div`
     background-color: ${Theme.colorBg};
     .continueWriting{
         animation: animate .4s infinite alternate;
+        color:${Theme.colorTitulo};
         @keyframes animate {
             from{
                 color: transparent;

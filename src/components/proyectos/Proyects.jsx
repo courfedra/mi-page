@@ -1,4 +1,5 @@
 import ProyectCard from "./ProyectCard"
+import Theme from "../Themes"
 import { useState,useEffect } from "react"
 import styled from "styled-components"
 import {db} from "../../data/firebaseConfig"
@@ -41,4 +42,5 @@ const ProyectStyled=styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: ${Theme.colorBg};
 `

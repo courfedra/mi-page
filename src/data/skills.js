@@ -8,7 +8,7 @@ export const hardSkill=[
 export const librarySkills=[
     {nombre:"Bootstrap"},
     {nombre:"Sass"},
-    {nombre:"Style Components"},
+    {nombre:"Styled Components"},
     {nombre:"Filezilla"},
     {nombre:"Firebase"},
     {nombre:"API"},
