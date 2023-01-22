@@ -1,5 +1,6 @@
 import ProyectCard from "./ProyectCard"
 import Theme from "../Themes"
+import SubTitulo from "../SubTitulo"
 import { useState,useEffect } from "react"
 import styled from "styled-components"
 import {db} from "../../data/firebaseConfig"
@@ -30,6 +31,11 @@ const Proyects = ()=>{
 
     return(
         <ProyectStyled>
+            <SubTitulo 
+                key="1"
+                titulo="Proyectos" 
+                texto="Alguno de los proyectos que he relaizado y continuo aprendiendo"
+            />
             <ProyectCard datos={datos}/>
         </ProyectStyled>
     )
@@ -40,7 +46,13 @@ export default Proyects
 
 const ProyectStyled=styled.div`
     width: 100%;
+    padding-top: 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: ${Theme.colorBg};
+    @media screen and (max-width:900px){
+        padding-top: 15%;
+    }
 `
