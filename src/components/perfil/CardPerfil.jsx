@@ -24,15 +24,11 @@ const CardPerfil = ({datos,posicion,totalPag,array}) => {
 export default CardPerfil
 
 const CardPerfilStyled=styled.div`
-    width: 100%;
+    width: 90%;
     margin: 5px;
-    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media screen and (max-width:900px) {
-        margin-top:15%;
-    }
 `
 const CardStyled=styled.div`
         display: flex;
@@ -41,6 +37,7 @@ const CardStyled=styled.div`
         flex-direction:row;
         width: 75%;
         min-height: 50vh;
+        max-height: 70vh;
         padding: 5px;
         text-align: center;
         background-color: ${Theme.colorBg};
@@ -63,12 +60,16 @@ const ImgCard=styled.img`
 
 const CardInfoStyled=styled.div`
     transition: all .25s ease-in-out;
-    padding: 10px;
+    padding: 5px;
     width: 75%;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align:center;
     color:${Theme.colorTxt};
     span{color: ${Theme.colorTitulo};}
+    @media screen and (max-width:900px){
+        font-size: .75rem;
+    }
 `
