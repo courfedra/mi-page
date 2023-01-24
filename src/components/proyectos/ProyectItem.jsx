@@ -13,8 +13,8 @@ const ProyectItem=({datos})=>{
                     <h3>Nombre del proyecto: <span>{datos.nombre}</span></h3>
                     <h3>Tecnología predominante: <span>{datos.sector}</span></h3>
                 </NameAndTecnology>
-                <a className="aButton" target="_blank" href={datos.linkRepo}>Link al repositorio</a>
-                <a className="aButton" target="_blank" href={datos.linkPage}>Link al sitio web</a>
+                <a className="aButton" target="_blank" href={datos.linkrepo}>Link al repositorio</a>
+                <a className="aButton" target="_blank" href={datos.linkpage}>Link al sitio web</a>
                 <p>{datos.descripcion}</p>
             </ProyectCardInfoStyled>
         </ProyectItemStyled>
