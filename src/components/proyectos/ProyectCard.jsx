@@ -1,13 +1,10 @@
 import styled from "styled-components"
 import ProyectItem from "./ProyectItem"
-import Loading from "../Loading"
 
 const ProyectCard = ({datos})=>{
     return(
         <ProyectCardStyled>
-            {datos.length!==0
-            ?datos.map((e)=>{return(<ProyectItem datos={e} key={e.id}/>)})
-            :<Loading/>} 
+            {datos.map((e)=>{return(<ProyectItem datos={e} key={e.id}/>)})}
         </ProyectCardStyled>
     )
 }

@@ -1,6 +1,7 @@
 import ProyectCard from "./ProyectCard"
 import Theme from "../Themes"
 import SubTitulo from "../SubTitulo"
+import Loading from "../Loading"
 import { useState,useEffect } from "react"
 import styled from "styled-components"
 import {db} from "../../data/firebaseConfig"
@@ -31,13 +32,19 @@ const Proyects = ()=>{
     console.log(datos)
     return(
         <ProyectStyled>
-            <SubTitulo 
+            {datos.length!==0
+            ?
+            <>
+                <SubTitulo 
                 key="1"
                 heigth="100vh"
                 titulo="Proyectos"
                 texto="Alguno de los proyectos que he realizado y continuo aprendiendo"
-            />
-            <ProyectCard datos={datos}/>
+                />
+                <ProyectCard datos={datos}/>
+            </>
+            :<Loading/>} 
+            
         </ProyectStyled>
     )
 }
@@ -47,6 +54,7 @@ export default Proyects
 
 const ProyectStyled=styled.div`
     width: 100%;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
