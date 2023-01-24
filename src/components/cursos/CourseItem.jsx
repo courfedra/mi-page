@@ -8,7 +8,7 @@ const CourseItem=({datos})=>{
             <h2>{datos.curso}</h2>
             <p>{datos.academia}</p>
             <LinksDetailStyled>
-                <Link to={`/cursos/${datos.categoria}`}><BotonCardDetailStyled>Entrar</BotonCardDetailStyled></Link>
+                <Link to={`/cursos/${datos.id}`}><BotonCardDetailStyled>Entrar</BotonCardDetailStyled></Link>
                 <ACardDetailStyled target="_blank" href={datos.certificado}>Certificado</ACardDetailStyled>
             </LinksDetailStyled>
         </CourseItemStyled>

@@ -57,6 +57,7 @@ const FormStyled=styled.form`
         height: 200px;
         border: none;
         border-radius: 100px;
+        margin: 5px;
         padding: 5px;
         background-color: ${Theme.colorBg};
         color:${Theme.colorEnlace};
