@@ -7,7 +7,10 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const CourseDetail = ({datos})=>{
     return(
-        <SkeletonTheme baseColor={Theme.colorBg} highlightColor={Theme.colorTitulo}>
+        <SkeletonTheme 
+            baseColor={Theme.colorBg} 
+            highlightColor={Theme.colorTitulo}
+            duration=".5">
             <CourseDetailItemStyled> 
                 <h3><span>Curso: </span>{datos.curso || <Skeleton/>}</h3>
                 <h4><span>Docente: </span>{datos.profesor || <Skeleton/>}</h4>
