@@ -2,20 +2,46 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
-import { hardSkill,librarySkills } from "../../data/skills"
+import Loading from "../Loading"
 import Theme from "../Themes"
+import {db} from "../../data/firebaseConfig"
+import { collection, getDocs,query} from "firebase/firestore"; 
+import { useState,useEffect } from "react"
 
 const Skills =()=>{
+
+const [datos,setDatos] = useState([]);
+
+    useEffect(()=>{
+        const dbAsync= async()=>{
+            //para cambiar categorias
+            let q=query(collection(db, "skills"))
+            const querySnapshot = await getDocs(q);
+            //metodo "docs" convierte array de documentos a array de objetos
+            const dataFromFirestone = querySnapshot.docs.map(item=>({
+                id:item.id,
+                ...item.data()
+            }))
+            return dataFromFirestone;
+        }
+
+        dbAsync()
+            .then(result=>setDatos(result))
+            .catch(err=>console.log(err))
+    },[]);
+
     return(
         <>
             <SubTitulo 
                 id="skillsCore"
-                heigth="auto"
                 titulo="Habilidades Centrales"
                 texto="Dejo a tu disposición las tecnologías centrales que he aprendido hasta el momento"
             />
             <SkillsStyled>
-                {hardSkill.map(elem=><BoxSkill key={hardSkill.indexOf(elem)} texto={elem.nombre}/>)}
+                {datos.length!==0
+                    ?datos[0].hardSkill.map(elem=><BoxSkill key={datos[0].hardSkill.indexOf(elem)} texto={elem}/>)
+                    :<Loading/>
+                }
             </SkillsStyled>
 
             <SubTitulo 
@@ -25,7 +51,10 @@ const Skills =()=>{
                 texto="Otras habilidades que he incorporado para mejorar la experiencia al momento de desarrollar"
             />
             <SkillsStyled >
-                {librarySkills.map(elem=><BoxSkill key={librarySkills.indexOf(elem)} texto={elem.nombre}/>)}
+                {datos.length!==0
+                    ?datos[0].librarySkill.map(elem=><BoxSkill texto={elem}/>)
+                    :<Loading/>
+                }
             </SkillsStyled>
 
             <SubTitulo 
