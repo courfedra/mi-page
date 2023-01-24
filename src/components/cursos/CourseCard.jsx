@@ -11,9 +11,8 @@ const CourseCard = ({datos}) =>{
                 <SubTitulo 
                     key="1"
                     heigth="100vh"
-                    activeScroll="active"
                     titulo="Cursos" 
-                    texto="Alguno de los cursos que he relaizado y continuo aprendiendo"
+                    texto="Alguno de los cursos que he realizado y continuo aprendiendo"
                 />
                 {datos.length!==0
                 ?datos.map((e)=>{return(<CourseItem datos={e} key={e.id}/>)})

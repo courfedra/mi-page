@@ -79,7 +79,7 @@ const Navbar = styled.nav`
             width: 100%;
             height: 100vh;
             left: -1500px;
-            background-color: ${Theme.colorBg}fa;
+            background-color: ${Theme.colorBg}f3;
         }
     }
     .navbarLink.active{

@@ -19,7 +19,6 @@ const Perfil = ()=>{
                 <SubTitulo 
                     key="1"
                     heigth="100vh"
-                    activeScroll="active"
                     titulo="¡Este soy yo!" 
                     texto="Te cuento mis gustos, experiencias y habilidades aprendidas en este recorrido"
                 />

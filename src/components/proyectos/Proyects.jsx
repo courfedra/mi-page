@@ -34,9 +34,8 @@ const Proyects = ()=>{
             <SubTitulo 
                 key="1"
                 heigth="100vh"
-                activeScroll="active"
                 titulo="Proyectos"
-                texto="Alguno de los proyectos que he relaizado y continuo aprendiendo"
+                texto="Alguno de los proyectos que he realizado y continuo aprendiendo"
             />
             <ProyectCard datos={datos}/>
         </ProyectStyled>
