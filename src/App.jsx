@@ -1,4 +1,3 @@
-import './scss/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import ContextProvider from "./context/Context"
