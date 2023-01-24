@@ -17,7 +17,9 @@ const Perfil = ()=>{
         <PerfilStyled>
             <div className="boxPerfil">
                 <SubTitulo 
-                    key="1" 
+                    key="1"
+                    heigth="100vh"
+                    activeScroll="active"
                     titulo="¡Este soy yo!" 
                     texto="Te cuento mis gustos, experiencias y habilidades aprendidas en este recorrido"
                 />
@@ -40,14 +42,10 @@ const PerfilStyled=styled.div`
     min-height: 100vh;
     background-color: ${Theme.colorBg};
     .boxPerfil{
-        margin-top:10%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @media screen and (max-width:900px){
-            margin-top:15%;
-        }
     }
 `
 

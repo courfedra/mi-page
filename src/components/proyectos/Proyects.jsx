@@ -33,7 +33,9 @@ const Proyects = ()=>{
         <ProyectStyled>
             <SubTitulo 
                 key="1"
-                titulo="Proyectos" 
+                heigth="100vh"
+                activeScroll="active"
+                titulo="Proyectos"
                 texto="Alguno de los proyectos que he relaizado y continuo aprendiendo"
             />
             <ProyectCard datos={datos}/>
@@ -46,13 +48,9 @@ export default Proyects
 
 const ProyectStyled=styled.div`
     width: 100%;
-    padding-top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: ${Theme.colorBg};
-    @media screen and (max-width:900px){
-        padding-top: 15%;
-    }
 `

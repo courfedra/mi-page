@@ -10,6 +10,8 @@ const CourseCard = ({datos}) =>{
             <CourseCardStyled>
                 <SubTitulo 
                     key="1"
+                    heigth="100vh"
+                    activeScroll="active"
                     titulo="Cursos" 
                     texto="Alguno de los cursos que he relaizado y continuo aprendiendo"
                 />
@@ -26,11 +28,7 @@ export default CourseCard
 
 const CourseCardStyled=styled.div`
     width: 100%;
-    margin-top: 10%;
     display:flex;
     flex-direction:column;
     align-items:center;
-    @media screen and (max-width:900px){
-        margin-top: 20%;
-    }
 `

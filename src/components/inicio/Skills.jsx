@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import BoxSkill from "./BoxSkill"
 import SubTitulo from "../SubTitulo"
-import { hardSkill,softSkill,librarySkills } from "../../data/skills"
+import { hardSkill,librarySkills } from "../../data/skills"
 import Theme from "../Themes"
 
 const Skills =()=>{
@@ -10,7 +10,7 @@ const Skills =()=>{
         <>
             <SubTitulo 
                 id="skillsCore"
-                color={Theme.colorLineaBorde}
+                heigth="auto"
                 titulo="Habilidades Centrales"
                 texto="Dejo a tu disposición las tecnologías centrales que he aprendido hasta el momento"
             />
@@ -20,7 +20,7 @@ const Skills =()=>{
 
             <SubTitulo 
                 id="skillsPasive"
-                color={Theme.colorLineaBorde}
+                heigth="auto"
                 titulo="Otras Habilidades"
                 texto="Otras habilidades que he incorporado para mejorar la experiencia al momento de desarrollar"
             />
@@ -30,7 +30,7 @@ const Skills =()=>{
 
             <SubTitulo 
                 id="softSkills"
-                color={Theme.colorLineaBorde}
+                heigth="auto"
                 titulo="Habilidades Personales"
                 texto="Habilidades que la experiencia en diferentes situaciones y/o trabajos me enseñaron"
             />

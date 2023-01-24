@@ -8,6 +8,7 @@ const Contacto = () => {
             <SubTitulo 
                 id="contacto" 
                 color={Theme.colorLineaBorde} 
+                heigth="10"
                 titulo="Contacto" 
                 texto="¡Envíame un mensaje y lo leeré con todo gusto!"/>
             <ContactoContainer>
