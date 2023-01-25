@@ -29,7 +29,6 @@ const Proyects = ()=>{
             .then(result=>setDatos(result))
             .catch(err=>console.log(err))
     },[]);
-    console.log(datos)
     return(
         <ProyectStyled>
             {datos.length!==0

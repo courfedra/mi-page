@@ -6,7 +6,7 @@ const NumberCard = ({posicion,array}) => {
         <NumberCardStyled>
             {
                 array.map((e)=>{
-                    if (e.id===posicion){
+                    if (array.indexOf(e)===posicion){
                         return(
                             <PosicionActiveStyled key={e.id}>
                                 <p>0</p>

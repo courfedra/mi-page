@@ -2,21 +2,20 @@ import NumberCard from "./NumberCard"
 import Theme from "../Themes"
 import styled from "styled-components"
 
-const CardPerfil = ({datos,posicion,totalPag,array}) => {
+const CardPerfil = ({posicion,totalPag,array}) => {
+
     return(
         <CardPerfilStyled>
             <CardStyled>
-                <ImgCard src={datos.img} alt={datos.altImg}/>
+                <SoftSkillCard>{array[posicion]}</SoftSkillCard>
                 <CardInfoStyled>
-                    <h2>{datos.titulo}</h2>
-
-                    <p>{datos.parrafoPrimero}</p>
-
-                    <p>{datos.parrafoSegundoInicio}<span>{datos.parrafoSpan}</span>{datos.parrafoSegundoFinal}</p>
+                    <h1>Hola</h1>
+                    <h2>Como estas</h2>
+                    <p>Todobien?</p>
 
                 </CardInfoStyled>
             </CardStyled>
-            <NumberCard posicion={posicion} totalPag={totalPag} array={array}/>
+            {<NumberCard posicion={posicion} totalPag={totalPag} array={array}/>}
         </CardPerfilStyled>
     )
 }
@@ -49,13 +48,9 @@ const CardStyled=styled.div`
     }
 `
 
-const ImgCard=styled.img`
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    border-radius: 100%;
-    border: 2.5px solid ${Theme.colorLineaBorde};
-    transition: all .25s ease-in-out;
+const SoftSkillCard=styled.h4`
+    
+    color: white;
 `
 
 const CardInfoStyled=styled.div`
