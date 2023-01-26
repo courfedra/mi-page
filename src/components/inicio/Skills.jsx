@@ -52,7 +52,7 @@ const [datos,setDatos] = useState([]);
             />
             <SkillsStyled >
                 {datos.length!==0
-                    ?datos[0].librarySkill.map(elem=><BoxSkill texto={elem}/>)
+                    ?datos[0].librarySkill.map(elem=><BoxSkill key={datos[0].librarySkill.indexOf(elem)} texto={elem}/>)
                     :<Loading/>
                 }
             </SkillsStyled>

@@ -12,8 +12,8 @@ return(
         </CardPresentation>
         <CardLinks>
             <BtnInfo><a>Descargar CV</a></BtnInfo>
-            <BtnInfo><a target="_blank" href="https://github.com/courfedra">GitHub</a></BtnInfo>
             <BtnInfo><a target="_blank" href="https://www.linkedin.com/in/franandres/">LinkedIn</a></BtnInfo>
+            <BtnInfo><a target="_blank" href="https://github.com/courfedra">GitHub</a></BtnInfo>
             <BtnInfo><a href="#contacto">Contacto</a></BtnInfo>
         </CardLinks>
     </CardInfo>

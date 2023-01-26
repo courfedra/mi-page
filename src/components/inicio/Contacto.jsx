@@ -15,15 +15,15 @@ const Contacto = () => {
                 <FormStyled>
                     <FieldsetStyled>
                         <LabelInput>
-                            <label for="inputTitulo">Título del mensaje</label>
+                            <label htmlFor="inputTitulo">Título del mensaje</label>
                             <input type="text" name="inputTitulo" id="inputTitulo" placeholder="Titulo de mensaje"></input>
                         </LabelInput>
                         <LabelInput>
-                            <label for="inputCorreo">Correo Electrónico</label>
+                            <label htmlFor="inputCorreo">Correo Electrónico</label>
                             <input type="email" name="inputCorreo" id="inputCorreo" placeholder="Correo Electrónico"></input>
                         </LabelInput>
                         <LabelInput>
-                            <label for="inputTextarea">Escribe tu mensaje</label>
+                            <label htmlFor="inputTextarea">Escribe tu mensaje</label>
                             <textarea id="inputTextarea" name="inputTextarea" placeholder="Mensaje..."></textarea>
                         </LabelInput>
                     </FieldsetStyled>
