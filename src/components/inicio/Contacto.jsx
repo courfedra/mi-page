@@ -3,6 +3,15 @@ import Theme from "../Themes"
 import SubTitulo from "../SubTitulo"
 
 const Contacto = () => {
+
+    const handlerSubmit=(elem)=>{
+        elem.preventDefault();
+        elem.target.inputTitulo.value=""
+        elem.target.inputCorreo.value=""
+        elem.target.inputTextarea.value=""
+        alert("Mensaje Enviado")
+    }
+
     return(
         <>
             <SubTitulo 
@@ -12,19 +21,19 @@ const Contacto = () => {
                 titulo="Contacto" 
                 texto="¡Envíame un mensaje y lo leeré con todo gusto!"/>
             <ContactoContainer>
-                <FormStyled>
+                <FormStyled onSubmit={handlerSubmit}>
                     <FieldsetStyled>
                         <LabelInput>
                             <label htmlFor="inputTitulo">Título del mensaje</label>
-                            <input type="text" name="inputTitulo" id="inputTitulo" placeholder="Titulo de mensaje"></input>
+                            <input required type="text" name="inputTitulo" id="inputTitulo" placeholder="Titulo de mensaje"></input>
                         </LabelInput>
                         <LabelInput>
                             <label htmlFor="inputCorreo">Correo Electrónico</label>
-                            <input type="email" name="inputCorreo" id="inputCorreo" placeholder="Correo Electrónico"></input>
+                            <input required type="email" name="inputCorreo" id="inputCorreo" placeholder="Correo Electrónico"></input>
                         </LabelInput>
                         <LabelInput>
                             <label htmlFor="inputTextarea">Escribe tu mensaje</label>
-                            <textarea id="inputTextarea" name="inputTextarea" placeholder="Mensaje..."></textarea>
+                            <textarea required id="inputTextarea" name="inputTextarea" placeholder="Mensaje..."></textarea>
                         </LabelInput>
                     </FieldsetStyled>
                     <button type="submit">Enviar</button>     

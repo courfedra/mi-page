@@ -27,6 +27,13 @@ const Course=()=>{
             .catch(err=>console.log(err))
     },[]);
 
+    //componente willUnMount
+    useEffect(()=>{
+        return(()=>{
+            setDatos([]);
+        })
+    },[])
+    
 return(
     <CourseStyled>
         <CourseCard datos={datos}/>   

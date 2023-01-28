@@ -29,6 +29,15 @@ const Proyects = ()=>{
             .then(result=>setDatos(result))
             .catch(err=>console.log(err))
     },[]);
+
+    //componente willUnMount
+    useEffect(()=>{
+        return(()=>{
+            setDatos([]);
+        })
+    },[])
+
+
     return(
         <ProyectStyled>
             {datos.length!==0

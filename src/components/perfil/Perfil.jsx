@@ -52,6 +52,13 @@ const Perfil = ()=>{
         page==(0)?setActivoAnterior("gray"):setActivoAnterior("")
     })
 
+    //componente willUnMount
+    useEffect(()=>{
+        return(()=>{
+            setDatos([]);
+        })
+    },[])
+
     return(
         <PerfilStyled>
             {datos.length!==0

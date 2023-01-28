@@ -8,13 +8,13 @@ const NumberCard = ({posicion,array}) => {
                 array.map((e)=>{
                     if (array.indexOf(e)===posicion){
                         return(
-                            <PosicionActiveStyled key={e.id}>
+                            <PosicionActiveStyled key={array.indexOf(e)}>
                                 <p>0</p>
                             </PosicionActiveStyled>)
                         
                     }else{
                         return(
-                            <PosicionNoActiveStyled key={e.id}>
+                            <PosicionNoActiveStyled key={array.indexOf(e)}>
                                 <p>0</p>
                             </PosicionNoActiveStyled>)
                     }

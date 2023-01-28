@@ -30,6 +30,13 @@ const [datos,setDatos] = useState([]);
             .catch(err=>console.log(err))
     },[]);
 
+    //componente willUnMount
+    useEffect(()=>{
+        return(()=>{
+            setDatos([]);
+        })
+    },[])
+
     return(
         <>
             <SubTitulo 
