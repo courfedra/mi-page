@@ -1,7 +1,7 @@
 import{Link} from "react-router-dom"
 import styled from "styled-components"
 import Theme from "./Themes"
-import logoPage from "../../public/logoPage.svg"
+import logoPage from "../assets/logoPage.svg"
 import { useState } from "react"
 
 const NavBar = ()=>{

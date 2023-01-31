@@ -1,6 +1,6 @@
 import Theme from "./Themes"
 import styled from "styled-components"
-import logoPage from "../../public/logoPage.svg"
+import logoPage from "../assets/logoPage.svg"
 
 const Pie = styled.main`
     border-top: 2px solid ${Theme.colorLineaBorde};
