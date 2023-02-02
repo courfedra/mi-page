@@ -47,7 +47,7 @@ const Proyects = ()=>{
                 key="1"
                 heigth="100vh"
                 titulo="Proyectos"
-                texto="Alguno de los proyectos que he realizado y continuo aprendiendo"
+                texto="Te presento algunos de los proyectos que he realizado durante mi contínuo aprendizaje"
                 />
                 <ProyectCard datos={datos}/>
             </>

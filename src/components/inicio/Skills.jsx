@@ -42,7 +42,7 @@ const [datos,setDatos] = useState([]);
             <SubTitulo 
                 id="skillsCore"
                 titulo="Habilidades Centrales"
-                texto="Dejo a tu disposición las tecnologías centrales que he aprendido hasta el momento"
+                texto="Mirá las tecnologías centrales que he aprendido hasta el momento"
             />
             <SkillsStyled>
                 {datos.length!==0

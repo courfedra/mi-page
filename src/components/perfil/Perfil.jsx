@@ -68,7 +68,7 @@ const Perfil = ()=>{
                             key="1"
                             heigth="100vh"
                             titulo="¡Este soy yo!" 
-                            texto="Te cuento mis gustos, experiencias y habilidades aprendidas en este recorrido"
+                            texto="Te cuento mis gustos, experiencias y habilidades aprendidas"
                         />
                         <CardPerfil posicion={page} totalPag={totalPages} array={datos[0].softSkill}/>
                     </div>

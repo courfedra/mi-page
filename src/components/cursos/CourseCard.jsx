@@ -15,7 +15,7 @@ const CourseCard = ({datos}) =>{
                         key="1"
                         heigth="100vh"
                         titulo="Cursos" 
-                        texto="Alguno de los cursos que he realizado y continuo aprendiendo"
+                        texto="Alguno de los cursos que he realizado con certificación"
                     />
                     {datos.map((e)=>{return(<CourseItem datos={e} key={e.id}/>)})}
                 </>
