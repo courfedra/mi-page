@@ -32,7 +32,7 @@ const Pie = styled.main`
     display: flex;
     justify-content: space-between;
     img{
-        width: 7.5%;
+        width: 60px;
         filter: grayscale(1);
         transition: all .25s ease-in-out;
         &:hover{
@@ -66,6 +66,8 @@ const CopyRigth=styled.div`
     letter-spacing: 1.5px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     color: ${Theme.colorTxt};
     background-color: ${Theme.colorLineaBorde};
 `
